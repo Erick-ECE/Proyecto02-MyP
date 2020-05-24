@@ -6,7 +6,7 @@
 ## Alumnos
 
 * Erick Enrique Castro Espinosa - *(`ericken15@ciencias.unam.mx`)*
-* Daniel Villegas  - *(`correo@ciencias.unam.mx`)*
+* Daniel Villegas  - *(`daniel_villegas@ciencias.unam.mx`)*
 * Ricardo Desales  - *(`correo@ciencias.unam.mx`)*
 
 
