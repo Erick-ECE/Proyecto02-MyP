@@ -1,3 +1,10 @@
+
+
 public abstract class Dulce {
-    public abstract String getIngredientes();
+    String tipo;
+
+    public String getTipo(){
+        return tipo;
+    }
+
 }
