@@ -1,4 +1,4 @@
-import java.util.Serializable;
+//import java.util.Serializable;
 
 /**
 * Interfaz para el modelamiento del proxy entre el jefe técnico y las
@@ -7,7 +7,7 @@ import java.util.Serializable;
 * @version Junio 2020
 */
 
-public class InterfazConsulta {
+public interface InterfazConsulta {
 
     /**
     * Método de la interfaz.

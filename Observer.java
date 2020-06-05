@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
 * Interfaz Observer. Utilizada para el modelamiento del patrón
 * Observer. 
@@ -7,6 +8,6 @@
 
 public interface Observer {
     //Método update de la interfaz 
-    public void update(); 
+    public void update(ArrayList<String> pedido, int id); 
 
 }

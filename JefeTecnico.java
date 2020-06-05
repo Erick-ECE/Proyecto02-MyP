@@ -55,9 +55,12 @@ public class JefeTecnico implements Observer {
 
     /**
      * Método de la interfaz
-     * @param o 
+     * @param pedido Las cadenas con los pedidos
+     * @param id El id de la sucursal  
      */
+    @Override 
     public void update(ArrayList<String> pedido, int id) {
         recibirPedido(pedido, id);
     }
+
 } 

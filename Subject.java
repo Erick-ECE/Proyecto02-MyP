@@ -7,10 +7,10 @@
 public interface Subject {
 
     //Método para agregar un observador
-    public static add(Object o);
+    public void add(Object o);
     //Método para eliminar un observador
-    public static remove(Object o);
+    public void remove(Object o);
     //Método que realiza la notificación al observador
-    public static notify(Object o); 
+    public void notify(Object o); 
 }
 
