@@ -7,7 +7,9 @@ public class WonkaPreparando implements Estado{
     }
     //Método para la preparación de dulces
     void preparaDulce(String dulce){
-
+        /*
+        * TODO
+        */
     }
     //Método no implementado en este estado
     void empacarDulce(Lote lote){
@@ -23,6 +25,6 @@ public class WonkaPreparando implements Estado{
     }
     //Método no implementado en este estado
     void apagar(){
-
+        System.out.println("Primero termino de preparar...\n");
     }
 }

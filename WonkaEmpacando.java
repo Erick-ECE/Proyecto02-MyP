@@ -14,7 +14,9 @@ public class WonkaEmpacando implements Estado{
     }
     //Método para entregar lotes a sucursales por medio de repartidores
     void darLote(Lote lote){
-
+        /*
+        * TODO
+        */
     }
     //Método no implementado en este estado
     void reabastecer(Ingrediente ingrediente){
@@ -22,6 +24,6 @@ public class WonkaEmpacando implements Estado{
     }
     //Método no implementado en este estado
     void apagar(){
-        
+        System.out.println("No me puedo pagar mientras empaco...\n");
     }
 }
