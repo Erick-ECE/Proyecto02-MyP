@@ -12,21 +12,21 @@ public class Almacen {
     }
 
     //Método para agregar nuevos ingredientes 
-    void agregarIngrediente(Ingrediente ingrediente){
-        ingredientes.put(ingrediente.nombre,ingrediente.cantidad);
+    void agregarIngrediente(String ingrediente, int cantidad){
+        ingredientes.put(ingrediente,cantidad);
     }
 
     //Método para reabastecer ingredientes (se reabastece por default 150 unidades)
     void reabastecerIngrediente(String ingrediente){
         System.out.println("Reabasteciendo " +ingrediente+"\n");
         Integer cantidadActual = ingredientes.get(ingrediente);
-        ingredientes.put(ingrediente.nombre,cantidadActual+150);
+        ingredientes.put(ingrediente,cantidadActual+150);
     }
 
     //Método para reducir cantidad de ingrediente consumido por receta
     void decrementaIngrediente(String ingrediente, int cantidad){
         System.out.println("Rreceta consume " +cantidad+" de " +ingrediente+"\n");
         Integer cantidadActual = ingredientes.get(ingrediente);
-        ingredientes.put(ingrediente.nombre,cantidadActual-cantidad);
+        ingredientes.put(ingrediente,cantidadActual-cantidad);
     }
 }
