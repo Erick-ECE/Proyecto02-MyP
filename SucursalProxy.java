@@ -12,7 +12,7 @@ public class SucursalProxy implements InterfazConsulta{
      * Constructor
      * @param s La Sucursal
      */
-    public SucursalProxy{Sucursal sucursal) {this.sucursal = sucursal; }
+    public SucursalProxy(Sucursal sucursal) {this.sucursal = sucursal; }
 
     /**
      * Método que regresa el id de la sucursal a la que hace referencia el
@@ -28,7 +28,7 @@ public class SucursalProxy implements InterfazConsulta{
      */
     @Override 
     public int consultarInventario(final String tipoDeDulce) {
-        sucursal.consultarInventario(tipoDeDulce);
+        return sucursal.consultarInventario(tipoDeDulce);
     }
 
 
