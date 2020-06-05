@@ -1,4 +1,5 @@
 import java.util.Collection; 
+import java.util.ArrayList;
 /**
 * Sucursal. Clase para modelar una sucursal.
 * @author Daniel Villegas & Erick Castro & Ricardo Desales
@@ -26,7 +27,7 @@ public class Sucursal implements InterfazConsulta {
      * el comportamiento de la sucursal 
      */
     Sucursal(int id, String direccion, String reposteroEncargado, 
-            String jefeTecnico) {
+            JefeTecnico jefeTecnico) {
         this.id = id;
         this. direccion = direccion;
         this.reposteroEncargado = reposteroEncargado;
@@ -43,14 +44,30 @@ public class Sucursal implements InterfazConsulta {
      * Método que realiza un pedido
      * @param pedido La cadena con el pedido 
      */
-    public void realizarPedido(String pedido) {
-        jefeTecnico.recibirPedido(pedido);
+    public void realizarPedido(ArrayList<String> pedido) {
+        jefeTecnico.recibirPedido(pedido,id);
+    }
+
+    @Override
+    public int consultarInventario(String tipo) {
+        // TODO Auto-generated method stub
+        int c = 0;
+        for (Lote l : inventario) {
+            if(l.getTipo().equals(tipo))
+                c++;
+        }
+        return c;
     }
 
     /**
      * Método que regresa la información de la sucursal
      */
-    public void getInformacion() {}
+    public void getInformacion() {
+        System.out.println("ID: " + id + "\n"+"Dirección: "+ direccion +
+        "\n" + "Repostero encargado: "+ reposteroEncargado+ "\n " );
+    }
+
+   
 
 
 }
