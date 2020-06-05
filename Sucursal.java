@@ -66,8 +66,13 @@ public class Sucursal implements InterfazConsulta {
         System.out.println("ID: " + id + "\n"+"Dirección: "+ direccion +
         "\n" + "Repostero encargado: "+ reposteroEncargado+ "\n " );
     }
-
-   
+    
+    /**
+     * @param lote Lote que se agregará al inventario
+     */
+   public void agregarLote(Lote lote) {
+       inventario.add(lote);
+   }
 
 
 }
