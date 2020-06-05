@@ -9,6 +9,18 @@ public class WonkaPreparando implements Estado{
     void preparaDulce(String dulce){
         /*
         * TODO
+        ////PSEUDOCODIGO///
+                    receta = maquina.getReceta(dulce)
+                    metodo Factory
+                    creaDulce(...){
+                        Wonka O GalleinatorAdapter:
+                        eligeMolde();
+                        void poneMezcla();
+                        void ingredientesExtra();
+                    }
+        ....
+        ////PSEUDOCODIGO///
+        
         */
     }
     //Método no implementado en este estado
@@ -21,7 +33,13 @@ public class WonkaPreparando implements Estado{
     }
     //Método para reabastecer en bodega en caso de que un ingrediente sea insuficiente
     void reabastecer(Ingrediente ingrediente){
-
+        /*
+        * TODO
+        ////PSEUDOCODIGO///
+            ....hacer reabastecimiento con métodos del almacén/bodega...
+        ....
+        ////PSEUDOCODIGO///
+        */
     }
     //Método no implementado en este estado
     void apagar(){

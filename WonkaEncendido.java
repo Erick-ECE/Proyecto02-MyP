@@ -9,6 +9,14 @@ public class WonkaEncendido implements Estado{
         maquina.asignarEstadoActual(getEstadoPreparando());
         /*
         * REVISAR CAMBIO DE ESTADO Y PREPARACIÓN
+        ////PSEUDOCODIGO///
+                    compruebaDisp = checaIngredientes(String dulce)
+                    if(compruebaDisp){
+                        maquina.preparaDulce(String dulce)
+                    }else{
+                        reabastecer(...)
+                    }
+        ////PSEUDOCODIGO///
         */
     }
     //Método no implementado en este estado
@@ -21,9 +29,7 @@ public class WonkaEncendido implements Estado{
     }
     //Método no implementado en este estado
     void reabastecer(Ingrediente ingrediente){
-        /*
-        * TODO
-        */
+        System.out.println("Primero escoge un dulce\n");
     }
     //Método no implementado en este estado
     void apagar(){
