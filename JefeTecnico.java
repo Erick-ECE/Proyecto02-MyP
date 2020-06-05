@@ -19,8 +19,6 @@ public class JefeTecnico implements Observer {
     private ArrayList<SucursalProxy> sucursalProxys; 
     //Referencia a la máquina wonka que utiliza
     Wonka wonka;
-    //Almacen que utiliza 
-    Almacen almacen;
 
     /**
      * Constructor 
