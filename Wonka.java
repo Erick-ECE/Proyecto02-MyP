@@ -1,12 +1,22 @@
 public class Wonka implements Preparacion{
+    
+    Estado apagado;
+    Estado encendido;
+    Estado preparando;
+    Estado empacando;
+
+    Estado estadoActual;
+
     /*
 	* Metodo Fatory
 	*/
-	public static Computadora getDulce(String tipo){
-        /*
-        * TODO
-        */
-        return null;
+	Wonka(){
+        apagado = new WonkaApagado(this);
+        encendido = new WonkaEncendido(this);
+        preparando = new WonkaPreparando(this);
+        empacando = new WonkaEmpacando(this);
+
+        estadoActual = apagado;
     }
 
     @Override
