@@ -4,20 +4,24 @@ public class WonkaApagado implements Estado{
     WonkaApagado(Wonka maquina){
         this.maquina = maquina;
     }
-
-    Object preparaDulce(String dulce){
-
+    //Método no implementado en este estado
+    void preparaDulce(String dulce){
+        System.out.println("Estoy apagado, enciéndeme\n");
     }
-
+    //Método no implementado en este estado
     void empacarDulce(Lote lote){
-
+        System.out.println("Estoy apagado, enciéndeme\n");
     }
-
-    Lote darLote(Lote lote){
-
+    //Método no implementado en este estado
+    void darLote(Lote lote){
+        System.out.println("Estoy apagado, enciéndeme\n");
     }
-
+    //Método no implementado en este estado
     void reabastecer(Ingrediente ingrediente){
-
+        System.out.println("Estoy apagado, enciéndeme\n");
+    }
+    //Método no implementado en este estado
+    void apagar(){
+        System.out.println("Ya estoy apagado, enciéndeme\n");
     }
 }

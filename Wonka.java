@@ -8,7 +8,7 @@ public class Wonka implements Preparacion{
     Estado estadoActual;
 
     /*
-	* Metodo Fatory
+	* constructor para Wonka
 	*/
 	Wonka(){
         apagado = new WonkaApagado(this);
@@ -18,6 +18,26 @@ public class Wonka implements Preparacion{
 
         estadoActual = apagado;
     }
+
+    public void asignarEstadoActual(Estado nuevoEstado){
+		estadoActual = nuevoEstado;
+	}
+
+    public Estado getEstadoApagado(){
+		return apagado;
+    }
+    
+    public Estado getEstadoEncendido(){
+		return encendido;
+    }
+    
+    public Estado getEstadoPreparando(){
+		return preparando;
+    }
+    
+    public Estado getEstadoEmpacando(){
+		return empacando;
+	}
 
     @Override
     public void eligeMolde(){
