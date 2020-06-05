@@ -13,10 +13,25 @@ public class WonkaPreparando implements Estado{
                     receta = maquina.getReceta(dulce)
                     metodo Factory
                     creaDulce(...){
-                        Wonka O GalleinatorAdapter:
-                        eligeMolde();
-                        void poneMezcla();
-                        void ingredientesExtra();
+                        //Wonka O GalleinatorAdapter:
+                        (if dulce= galleta){
+                            GalleinatorAdapter.prepararDulce(dulce){
+                                //por implementar//
+                                eligeMolde();
+                                void poneMezcla();
+                                void ingredientesExtra();
+                                //por implementar//
+                            }
+                        }else{
+                            Wonka.prepararDulce(dulce){
+                                //por implementar//
+                                eligeMolde();
+                                void poneMezcla();
+                                void ingredientesExtra();
+                                //por implementar//
+                            }
+                        }
+                
                     }
         ....
         ////PSEUDOCODIGO///
