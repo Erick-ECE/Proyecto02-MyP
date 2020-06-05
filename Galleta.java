@@ -1,3 +1,7 @@
 public abstract class Galleta {
-    public abstract String getIngredientes();
+    String tipo;
+
+    public String getTipo(){
+        return tipo;
+    }
 }

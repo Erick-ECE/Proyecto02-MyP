@@ -7,16 +7,18 @@ public class GalleneitorAdapter implements Preparacion {
 
     @Override
     public void eligeMolde(){
+        System.out.println("Molde de galleta generico");
 
     }
 
     @Override
     public void poneMezcla(){
-
+        maquina.prepararMasa();
+        maquina.hornearGalleta();
     }
 
     @Override
     public void ingredientesExtra(){
-        
+        System.out.println("Sin ingredientes extra");
     }
 }

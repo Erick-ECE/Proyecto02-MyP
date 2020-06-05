@@ -3,13 +3,13 @@
 */
 public interface Estado {
     //Método para la preparación de dulces
-    void preparaDulce(String dulce);
+    public void preparaDulce(String dulce);
     //Método para el empacado de dulces
-    void empacarDulce(Lote lote);
+    public void empacarDulce(Lote lote);
     //Método para entregar lote al repartidor
-    void darLote(Lote lote);
+    public void darLote(Lote lote);
     //Método para mandar reabastecer un ingrediente si no se cuenta con lo suficiente
-    void reabastecer(Ingrediente ingrediente);
+    public void reabastecer(Ingrediente ingrediente);
     //Método para apagar la máquina
-    void apagar();
+    public void apagar();
 }
