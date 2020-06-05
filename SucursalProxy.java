@@ -26,6 +26,7 @@ public class SucursalProxy implements InterfazConsulta{
      * @param tipoDeDulce La descripcion del tipo de dulce que 
      * se desea buscar
      */
+    @Override 
     public int consultarInventario(final String tipoDeDulce) {
         sucursal.consultarInventario(tipoDeDulce);
     }

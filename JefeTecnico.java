@@ -51,6 +51,17 @@ public class JefeTecnico implements Observer {
                 }
             }
         }
+
+    }
+
+    /**
+     * 
+     * @param pedido El pedido que se desea repartir
+     */
+    public void asignarReparticiones(ArrayList<Lote> pedido){
+        /**
+         * TODO
+         */
     }
 
     /**
