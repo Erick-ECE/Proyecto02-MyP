@@ -1,32 +1,63 @@
+
 //import java.beans.IntrospectionException;
-import java.util.Hashtable;
+import java.util.ArrayList;
+//import java.util.Hashtable;
 
 /**
  * Clase Almacen para guardar los ingredientes
  */
 public class Almacen {
-    Hashtable <String,Integer> ingredientes;
+    //Hashtable <String,Integer> ingredientes;
+    private ArrayList<Ingrediente> ingredientes;
     //Constructor de la clase, crea la Hash para los ingredientes
-    Almacen(){
+    /*Almacen(){
         ingredientes = new Hashtable<String,Integer>();
     }
 
     //Método para agregar nuevos ingredientes 
     public void agregarIngrediente(String ingrediente, int cantidad){
         ingredientes.put(ingrediente,cantidad);
+    }*/
+
+    /**
+     * Constructor
+     */
+    public Almacen(){
+        ingredientes = new ArrayList<>();
+    }
+    /**
+     * Método que agrega un ingrediente a la lista de ingredientes del 
+     * almacen
+     * @param i El ingrediente a agregar
+     */
+    public void agregarIngrediente(Ingrediente i) {
+        ingredientes.add(i);
     }
 
     //Método para reabastecer ingredientes (se reabastece por default 150 unidades)
     public void reabastecerIngrediente(String ingrediente){
         System.out.println("Reabasteciendo " +ingrediente+"\n");
-        Integer cantidadActual = ingredientes.get(ingrediente);
-        ingredientes.put(ingrediente,cantidadActual+150);
+        //Integer cantidadActual = ingredientes.get(ingrediente);
+        //ingredientes.put(ingrediente,cantidadActual+150);
+        for(Ingrediente i : ingredientes){
+            if(i.getNombre().equals(ingrediente)){
+                i.aumentarCantidad(150);
+                break;
+            }
+        }
     }
 
     //Método para reducir cantidad de ingrediente consumido por receta
     public void decrementaIngrediente(String ingrediente, int cantidad){
-        System.out.println("Rreceta consume " +cantidad+" de " +ingrediente+"\n");
-        Integer cantidadActual = ingredientes.get(ingrediente);
-        ingredientes.put(ingrediente,cantidadActual-cantidad);
+        System.out.println("Receta consume " +cantidad+" de " +ingrediente
+        +"\n");
+        //Integer cantidadActual = ingredientes.get(ingrediente);
+        //ingredientes.put(ingrediente,cantidadActual-cantidad);
+        for(Ingrediente i : ingredientes){
+            if(i.getNombre().equals(ingrediente)){
+                i.disminuirCantidad(cantidad);
+                break;
+            }
+        }
     }
 }
