@@ -1,25 +1,35 @@
 import java.util.ArrayList;
 
 public class Wonka implements Preparacion{
-    
+    //Estado apagado
     private Estado apagado;
+    //Estado encendido
     private Estado encendido;
+    //Estado de preparación
     private Estado preparando;
+    //Estado de empaque
     private Estado empacando;
+    //El estado actual de la máquina
     private Estado estadoActual;
+    //El recetario de la mñáquina
     private ArrayList<Receta> recetario;
+    //Referencia al almacen
+    private Almacen almacen;
+    //Referencia al adaptador  
+    private GalleneitorAdapter galleneitorAdapter;
 
   /*
   *Constructor para Wonka. Construye la máquina con sus estados 
   * y también el recetario. 
 	*/
-	public Wonka(){
+	public Wonka(GalleneitorAdapter galleneitorAdapter){
     apagado = new WonkaApagado(this);
     encendido = new WonkaEncendido(this);
     preparando = new WonkaPreparando(this);
     empacando = new WonkaEmpacando(this);
     estadoActual = apagado;
-    recetario = new ArrayList<>(); // AQUI SE GUARDA
+    recetario = new ArrayList<>(); //Este es el recetario 
+    this.galleneitorAdapter = galleneitorAdapter;
 
     //Se guardan las recetas en el recetario de la máquina 
     ArrayList<Ingrediente> chocoLeche = new ArrayList<>();
@@ -92,7 +102,7 @@ public class Wonka implements Preparacion{
     recetario.add(galletasSaladas);
     recetario.add(galletasRellenas);
     recetario.add(galletasConChispas);
-    
+
   }
 
   public void asignarEstadoActual(Estado nuevoEstado){
