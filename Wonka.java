@@ -1,21 +1,19 @@
 public class Wonka implements Preparacion{
     
-    Estado apagado;
-    Estado encendido;
-    Estado preparando;
-    Estado empacando;
+    private Estado apagado;
+    private Estado encendido;
+    private Estado preparando;
+    private Estado empacando;
+    private Estado estadoActual;
 
-    Estado estadoActual;
-
-    /*
+  /*
 	* constructor para Wonka
 	*/
-	Wonka(){
+	public Wonka(){
     apagado = new WonkaApagado(this);
     encendido = new WonkaEncendido(this);
     preparando = new WonkaPreparando(this);
     empacando = new WonkaEmpacando(this);
-
     estadoActual = apagado;
   }
 
@@ -52,5 +50,13 @@ public class Wonka implements Preparacion{
   @Override
   public void ingredientesExtra(){
       
+  }
+
+  public boolean validarPedido(String p) {
+	  return false;
+  }
+
+  public Lote prepararDulce(String p) {
+	  return null;
   }
 }

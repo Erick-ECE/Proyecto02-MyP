@@ -6,7 +6,7 @@ public class WonkaPreparando implements Estado{
         this.maquina = maquina;
     }
     //Método para la preparación de dulces
-    void preparaDulce(String dulce){
+    public void preparaDulce(String dulce){
         /*
         * TODO
         ////PSEUDOCODIGO///
@@ -38,16 +38,18 @@ public class WonkaPreparando implements Estado{
         
         */
     }
+    
     //Método no implementado en este estado
-    void empacarDulce(Lote lote){
+    public oid empacarDulce(Lote lote){
         System.out.println("Aquí no puedo empacar, primero prepara un lote\n");
     }
     //Método no implementado en este estado
-    void darLote(Lote lote){
+    public void darLote(Lote lote){
         System.out.println("Aquí no puedo entregar, primero prepara un lote\n");
     }
+
     //Método para reabastecer en bodega en caso de que un ingrediente sea insuficiente
-    void reabastecer(Ingrediente ingrediente){
+    public void reabastecer(Ingrediente ingrediente){
         /*
         * TODO
         ////PSEUDOCODIGO///
@@ -56,8 +58,9 @@ public class WonkaPreparando implements Estado{
         ////PSEUDOCODIGO///
         */
     }
+
     //Método no implementado en este estado
-    void apagar(){
+    public void apagar(){
         System.out.println("Primero termino de preparar...\n");
     }
 }

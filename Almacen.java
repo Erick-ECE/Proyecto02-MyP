@@ -1,4 +1,4 @@
-import java.beans.IntrospectionException;
+//import java.beans.IntrospectionException;
 import java.util.Hashtable;
 
 /**
@@ -12,19 +12,19 @@ public class Almacen {
     }
 
     //Método para agregar nuevos ingredientes 
-    void agregarIngrediente(String ingrediente, int cantidad){
+    public void agregarIngrediente(String ingrediente, int cantidad){
         ingredientes.put(ingrediente,cantidad);
     }
 
     //Método para reabastecer ingredientes (se reabastece por default 150 unidades)
-    void reabastecerIngrediente(String ingrediente){
+    public void reabastecerIngrediente(String ingrediente){
         System.out.println("Reabasteciendo " +ingrediente+"\n");
         Integer cantidadActual = ingredientes.get(ingrediente);
         ingredientes.put(ingrediente,cantidadActual+150);
     }
 
     //Método para reducir cantidad de ingrediente consumido por receta
-    void decrementaIngrediente(String ingrediente, int cantidad){
+    public void decrementaIngrediente(String ingrediente, int cantidad){
         System.out.println("Rreceta consume " +cantidad+" de " +ingrediente+"\n");
         Integer cantidadActual = ingredientes.get(ingrediente);
         ingredientes.put(ingrediente,cantidadActual-cantidad);
