@@ -38,9 +38,9 @@ public class WonkaPreparando implements Estado{
         
         */
     }
-    
+
     //Método no implementado en este estado
-    public oid empacarDulce(Lote lote){
+    public void empacarDulce(Lote lote){
         System.out.println("Aquí no puedo empacar, primero prepara un lote\n");
     }
     //Método no implementado en este estado
