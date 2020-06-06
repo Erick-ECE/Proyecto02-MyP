@@ -102,36 +102,67 @@ public class Wonka implements Preparacion{
 
   }
 
+  /**
+   * Método que determina el estado actual de la maquina
+   * @param nuevoEstado
+   */
   public void asignarEstadoActual(Estado nuevoEstado) {
     estadoActual = nuevoEstado;
   }
 
+  /**
+   * Método que regresa el estado apagado de la máquina
+   * @return apagando
+   */
   public Estado getEstadoApagado() {
     return apagado;
   }
 
+  /**
+   * Método que regresa el estado encendido de la máquina
+   * @return encendido 
+   */
   public Estado getEstadoEncendido() {
     return encendido;
   }
 
+  /**
+   * Método que regresa el estado preparando de la máquina
+   * @return preparando
+   */
   public Estado getEstadoPreparando() {
     return preparando;
   }
 
+  /**
+   * Método que regresa el esdtado de empacando de la máquina
+   * @return empacando 
+   */
   public Estado getEstadoEmpacando() {
     return empacando;
   }
 
+  /**
+   * Método de la interfaz preparacion que elige el molde del dulce
+   * @param molde El molde a elegir
+   */
   @Override
   public void eligeMolde(String molde) {
     System.out.println("Se eligio el molde de " + molde);
   }
 
+  /**
+   * Método que indica que la mezcla ya se ha puesto en el molde
+   */
   @Override
   public void poneMezcla() {
     System.out.println("Se puso la mezcla en el molde");
   }
 
+  /**
+   * Método que agrega los ingredientes extras del dulce 
+   * @param dulce El dulce del cual se agregan los ingredientes extra
+   */
   @Override
   public void ingredientesExtra(String dulce) {
     System.out.println("Se agregaron los ingredientes extra de  " + dulce);
@@ -149,10 +180,17 @@ public class Wonka implements Preparacion{
       if(r.getNombre().equals(p))
         dulce = r;
     }
-    //Pasa a verificar el pedido
-    
+    //Hasta este punto, tenemos la receta para un único dulce,
+    //recordemos que hemos dicho que un lote tiene 250 unidades 
+
   }
 
+  /**
+   * Método que prepara un dulce y regresa un lote con 250 piezas 
+   * del dulce
+   * @param p El dulce a preparar
+   * @return Un lote del tipo de dulce que se eligió
+   */
   public Lote prepararDulce(String p) {
     eligeMolde(p);
     poneMezcla();

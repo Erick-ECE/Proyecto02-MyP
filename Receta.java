@@ -22,7 +22,8 @@ public class Receta {
     }
 
     /**
-     * Método que regresa los ingredientes de la receta. _
+     * Método que regresa los ingredientes de la receta. 
+     * @return ingredientes 
      */
     public ArrayList<Ingrediente> getReceta(){
         return ingredientes;
@@ -30,6 +31,7 @@ public class Receta {
 
     /**
      * Método que regresa el nombre de la receta
+     * @return nombre 
      */
     public String getNombre(){ return nombre; }
 }
