@@ -1,6 +1,7 @@
 public class GalleneitorAdapter implements Preparacion {
     public Galleneitor maquina;
 
+
     public GalleneitorAdapter(Galleneitor maquina){
         this.maquina = maquina;
     }
@@ -13,12 +14,16 @@ public class GalleneitorAdapter implements Preparacion {
 
     @Override
     public void poneMezcla(){
-        maquina.prepararMasa();
-        maquina.hornearGalleta();
+       System.out.println("Mezcla Galleta");
     }
 
     @Override
     public void ingredientesExtra(){
         System.out.println("Sin ingredientes extra");
+    }
+
+    public Lote prepararDulce(String p) {
+        Lote l = new Lote(maquina.prepararDulce(p));
+        return l;
     }
 }
