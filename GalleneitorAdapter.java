@@ -7,7 +7,7 @@ public class GalleneitorAdapter implements Preparacion {
     }
 
     @Override
-    public void eligeMolde(){
+    public void eligeMolde(String molde){
         System.out.println("Molde de galleta generico");
 
     }
@@ -18,7 +18,7 @@ public class GalleneitorAdapter implements Preparacion {
     }
 
     @Override
-    public void ingredientesExtra(){
+    public void ingredientesExtra(String dulce){
         System.out.println("Sin ingredientes extra");
     }
 

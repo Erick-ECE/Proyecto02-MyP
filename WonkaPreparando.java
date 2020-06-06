@@ -1,12 +1,19 @@
 public class WonkaPreparando implements Estado{
     Wonka maquina;
 
+
     //Constructor para Wonka Preparando
     WonkaPreparando(Wonka maquina){
         this.maquina = maquina;
     }
     //Método para la preparación de dulces
     public void preparaDulce(String dulce){
+        if(dulce == "Galleta Rellena" || dulce == "Galleta Salada" || dulce == "Galleta con Chispas"){
+            maquina.galleneitorAdapter.prepararDulce(dulce);
+        }
+        else{
+            // llama a wonka.preparaDulce(dulce);
+        }
         /*
         * TODO
         ////PSEUDOCODIGO///
