@@ -1,3 +1,4 @@
+import java.util.*;
 /**
 * Repartidor. Esta clase será la encargada de entregar los lotes 
 * fabricados a las sucursales que los solicitan
@@ -12,6 +13,8 @@ public class Repartidor {
     private String rfc;
     //Nombre del repartidor
     private String nombre;
+    //Referencia a las sucursales
+    private ArrayList<Sucursal> sucursales;
 
     /**
      * Constructor de la clase
@@ -19,10 +22,12 @@ public class Repartidor {
      * @param rfc RFC del repartidor
      * @param nombre Nombre del repartidor
      */
-    public Repartidor(int id, String rfc, String nombre) {
+    public Repartidor(int id, String rfc, String nombre,
+    ArrayList<Sucursal> sucursales ) {
         this.id = id;
         this.rfc = rfc;
         this.nombre = nombre; 
+        this.sucursales = sucursales;
     }
 
     /**
@@ -30,6 +35,30 @@ public class Repartidor {
      * @return id 
      */
     public int getId() { return id; }
+
+    /**
+     * Método que reparte un pedido de lotes a una sucursal
+     * @param pedido El pedido realizado
+     * @param id El id de la sucursal
+     */
+    public void repartir(ArrayList<Lote> pedido, int id) {
+        Sucursal s = null;
+        //Encontramos la sucursal
+        for(Sucursal d : sucursales) {
+            if(d.getId() == id) {
+                s = d;
+                break;
+            }
+        }
+        //Encontró la tienda
+        System.out.println("Sucursal: "+ id+ "recibiendo pedido...\n" );
+        System.out.println("Actualizando inventario...\n");
+        for(Lote l : pedido){
+            s.agregarLote(l);
+            System.out.println("Lote de tipo"+ l.getTipo());
+        }
+        System.out.println("Pedido entregado con éxito.");
+    }
     
     /**
      * Método que regresa la información del repartidor

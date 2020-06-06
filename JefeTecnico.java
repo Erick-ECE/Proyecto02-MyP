@@ -17,7 +17,7 @@ public class JefeTecnico implements Observer {
     //Objeto random
     Random rnd; 
     //Repartidores que podrán realizar las entregas
-    private ArrayList<Repartidor> repartidores; // INICIA CON 7
+    private Repartidor[] repartidores; // INICIA CON 7
     //Proxys de las sucursales para revisar sus inventarios
     private ArrayList<SucursalProxy> sucursalProxys; 
     //Referencia a la máquina wonka que utiliza
@@ -57,11 +57,36 @@ public class JefeTecnico implements Observer {
     /**
      * 
      * @param pedido El pedido que se desea repartir
+     * @param id El id de la sucursar a la cual se enviará el pedido
+     * @param repartidores Los repartidores posibles
      */
-    public void asignarReparticiones(ArrayList<Lote> pedido){
-        /**
-         * TODO
-         */
+    public void asignarReparticiones(ArrayList<Lote> pedido, int id, 
+    Repartidor[] repartidores){
+        int carro = rnd.nextInt(100);
+        //Revisar elección de repartidor no null
+        Repartidor r = null;
+        while (r == null){
+            r = repartidores[rnd.nextInt(10)];
+        }
+        System.out.println("Datos de la entrega: \n Repartidor: "+r+ 
+        "\nNúmero de camión: "+ carro+"\n ID de sucursal destino: "+ id);
+        r.repartir(pedido,id);
+    }
+
+    /**
+     * Método que contrata un repartidor. Este es asignado en alguno de 
+     * los espacios disponibles del arreglo de repartidores. 
+     * @param r
+     */
+    public void contrataRepartidor(Repartidor r) {
+        for(int i = 0; i < 10 ; i++){
+            if(repartidores[i] == null){
+                repartidores[i] = r;
+                System.out.println("Repartidor contratado.");
+                return;
+            }
+        }
+        System.out.println("no hay vacantes");
     }
 
     /**
@@ -73,5 +98,6 @@ public class JefeTecnico implements Observer {
     public void update(ArrayList<String> pedido, int id) {
         recibirPedido(pedido, id);
     }
+
 
 } 

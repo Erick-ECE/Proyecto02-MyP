@@ -137,8 +137,20 @@ public class Wonka implements Preparacion{
     System.out.println("Se agregaron los ingredientes extra de  " + dulce);
   }
 
+  /**
+   * Método que valida el pedido que recibe. 
+   * @param p El pedido que recibe la máquina
+   * @return true Si el pedido es aceptado, false en otro caso
+   */
   public boolean validarPedido(String p) {
-    return false;
+    Receta dulce = null;
+    //Encuentra la receta del dulce
+    for (Receta r : recetario){
+      if(r.getNombre().equals(p))
+        dulce = r;
+    }
+    //Pasa a verificar el pedido
+    
   }
 
   public Lote prepararDulce(String p) {
