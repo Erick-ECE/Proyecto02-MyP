@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-<<<<<<< Updated upstream
 public class Wonka implements Preparacion{
     //Estado apagado
     private Estado apagado;
@@ -24,22 +23,6 @@ public class Wonka implements Preparacion{
   * y también el recetario. 
 	*/
 	public Wonka(GalleneitorAdapter galleneitorAdapter){
-=======
-public class Wonka implements Preparacion {
-
-  private Estado apagado;
-  private Estado encendido;
-  private Estado preparando;
-  private Estado empacando;
-  private Estado estadoActual;
-  private ArrayList<Receta> recetario;
-
-  /*
-   * Constructor para Wonka. Construye la máquina con sus estados y también el
-   * recetario.
-   */
-  public Wonka() {
->>>>>>> Stashed changes
     apagado = new WonkaApagado(this);
     encendido = new WonkaEncendido(this);
     preparando = new WonkaPreparando(this);
