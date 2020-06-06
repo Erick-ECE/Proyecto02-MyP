@@ -31,6 +31,12 @@ public class Ingrediente {
     public void aumentarCantidad(int c){
         cantidad += c;
     }
+
+    /**
+     * Método que regresa la cantidad 
+     * @return La cantidad del ingrediente 
+     */
+    public int getCantidad() {return cantidad; }
     /**
      * Método que regresa el nombre del ingrediente
      * @return nombre El nobmre del ingrediente
