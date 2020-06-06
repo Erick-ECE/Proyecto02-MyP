@@ -27,4 +27,9 @@ public class Receta {
     public ArrayList<Ingrediente> getReceta(){
         return ingredientes;
     }
+
+    /**
+     * Método que regresa el nombre de la receta
+     */
+    public String getNombre(){ return nombre; }
 }
