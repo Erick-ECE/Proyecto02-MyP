@@ -9,7 +9,7 @@ public class WonkaEmpacando implements Estado{
     public WonkaEmpacando(Wonka maquina){
         this.maquina = maquina;
     }
-    
+
     //Método no implementado en este estado
     public void preparaDulce(String dulce){
         System.out.println("Ya preparé, aqui solo puedo empacar y enviar pedidos\n");

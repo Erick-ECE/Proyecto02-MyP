@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Wonka implements Preparacion{
     
     private Estado apagado;
@@ -5,9 +7,11 @@ public class Wonka implements Preparacion{
     private Estado preparando;
     private Estado empacando;
     private Estado estadoActual;
+    private ArrayList<Receta> recetario;
 
   /*
-	* constructor para Wonka
+  *Constructor para Wonka. Construye la máquina con sus estados 
+  * y también el recetario. 
 	*/
 	public Wonka(){
     apagado = new WonkaApagado(this);
@@ -15,6 +19,80 @@ public class Wonka implements Preparacion{
     preparando = new WonkaPreparando(this);
     empacando = new WonkaEmpacando(this);
     estadoActual = apagado;
+    recetario = new ArrayList<>(); // AQUI SE GUARDA
+
+    //Se guardan las recetas en el recetario de la máquina 
+    ArrayList<Ingrediente> chocoLeche = new ArrayList<>();
+    chocoLeche.add(new Ingrediente("manteca de cacao", 15));
+    chocoLeche.add(new Ingrediente("azucar", 10));
+    chocoLeche.add(new Ingrediente("leche", 15));
+    Receta chocolateConLeche = new Receta("Chocolate con leche", 
+    chocoLeche);
+ 
+    ArrayList<Ingrediente> chocoObs = new ArrayList<>();
+    chocoObs.add(new Ingrediente("manteca de cacao", 35));
+    chocoObs.add(new Ingrediente("azucar", 8));
+    chocoObs.add(new Ingrediente("cacao", 25));
+    Receta chocolateObscuro = new Receta("Chocolate Obscuro", chocoObs);
+
+    ArrayList<Ingrediente> chocAlmen = new ArrayList<>();
+    chocAlmen.add(new Ingrediente("manteca de cacao", 35));
+    chocAlmen.add(new Ingrediente("azucar", 8));
+    chocAlmen.add(new Ingrediente("almendras", 5));
+    Receta chocolateConAlmendras = new Receta("Chocolate con almendras", 
+    chocAlmen);
+    /*----------------------------------------------------*/
+    recetario.add(chocolateConAlmendras);
+    recetario.add(chocolateConLeche);
+    recetario.add(chocolateObscuro);
+    /*----------------------------------------------------*/
+    ArrayList<Ingrediente> ositoDulce = new ArrayList<>();
+    ositoDulce.add(new Ingrediente("Agua", 10));
+    ositoDulce.add(new Ingrediente("Grenetina", 7));
+    ositoDulce.add(new Ingrediente("Miel de maiz", 5));
+    Receta ositosDulces = new Receta("Ositos dulces", ositoDulce);
+
+    ArrayList<Ingrediente> gusanoAcido = new ArrayList<>();
+    gusanoAcido.add(new Ingrediente("Agua", 12));
+    gusanoAcido.add(new Ingrediente("Grenetina", 8));
+    gusanoAcido.add(new Ingrediente("saborizante acido", 6));
+    Receta gusanosAcidos = new Receta("Gusanos acidos", gusanoAcido);
+   
+    ArrayList<Ingrediente> frutaChamoy = new ArrayList<>();
+    frutaChamoy.add(new Ingrediente("Agua", 10));
+    frutaChamoy.add(new Ingrediente("Grenetina", 6));
+    frutaChamoy.add(new Ingrediente("Chamoy", 9));
+    Receta frutasConChamoy = new Receta("Frutas con chamoy", frutaChamoy);
+    /*------------------------------------------------------*/
+    recetario.add(ositosDulces);
+    recetario.add(gusanosAcidos);
+    recetario.add(frutasConChamoy);
+    /*-------------------------------------------------------*/
+
+    ArrayList<Ingrediente> gallSaladas = new ArrayList<>();
+    gallSaladas.add(new Ingrediente("Harina", 20));
+    gallSaladas.add(new Ingrediente("Agua", 10));
+    gallSaladas.add(new Ingrediente("Huevo", 1));
+    gallSaladas.add(new Ingrediente("Sal", 3));
+    Receta galletasSaladas = new Receta("Galletas saladas", gallSaladas);
+    ArrayList<Ingrediente> gallRell = new ArrayList<>();
+    gallRell.add(new Ingrediente("Harina", 24));
+    gallRell.add(new Ingrediente("Leche", 10));
+    gallRell.add(new Ingrediente("Huevo", 1));
+    gallRell.add(new Ingrediente("Mermelada", 5));
+    Receta galletasRellenas = new Receta("Galletas rellenas", gallRell);
+    ArrayList<Ingrediente> gallChisp = new ArrayList<>();
+    gallSaladas.add(new Ingrediente("Harina", 23));
+    gallSaladas.add(new Ingrediente("Leche", 12));
+    gallSaladas.add(new Ingrediente("Huevo", 1));
+    gallSaladas.add(new Ingrediente("Chispas", 7));
+    Receta galletasConChispas = new Receta("Galletas con Chispas",
+    gallChisp);
+    /*----------------------------------------------------------*/
+    recetario.add(galletasSaladas);
+    recetario.add(galletasRellenas);
+    recetario.add(galletasConChispas);
+    
   }
 
   public void asignarEstadoActual(Estado nuevoEstado){
