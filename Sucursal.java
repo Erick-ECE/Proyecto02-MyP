@@ -38,7 +38,7 @@ public class Sucursal implements InterfazConsulta {
      * Método que regresa el id de la sucursal
      * @return id 
      */
-    public int getId( return id ;)
+    public int getId(){ return id ;}
 
     /**
      * Método que realiza un pedido
