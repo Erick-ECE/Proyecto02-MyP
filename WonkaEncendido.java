@@ -6,7 +6,7 @@ public class WonkaEncendido implements Estado{
     }
     //Método que cambia de encendido a estado de preparar
     public void preparaDulce(String dulce){
-        maquina.asignarEstadoActual(getEstadoPreparando());
+        maquina.asignarEstadoActual(maquina.getEstadoPreparando());
         /*
         * REVISAR CAMBIO DE ESTADO Y PREPARACIÓN
         ////PSEUDOCODIGO///
@@ -34,6 +34,6 @@ public class WonkaEncendido implements Estado{
     //Método no implementado en este estado
     public void apagar(){
         System.out.println("Apagando máquina...\n");
-        maquina.asignarEstadoActual(getEstadoApagado());
+        maquina.asignarEstadoActual(maquina.getEstadoApagado());
     }
 }
