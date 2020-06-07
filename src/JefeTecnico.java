@@ -21,7 +21,7 @@ public class JefeTecnico implements Observer {
     //Proxys de las sucursales para revisar sus inventarios
     private ArrayList<SucursalProxy> sucursalProxys; 
     //Referencia a la máquina wonka que utiliza
-    Wonka wonka;
+    Wonka wonka; 
 
     /**
      * Constructor jefe tecnico

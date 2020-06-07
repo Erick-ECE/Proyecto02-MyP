@@ -26,7 +26,13 @@ _implementación de patrones de diseño en una simulacion de fabrica de dulces_
 
 ## Compilar y Ejecutar:
 ```bash
-$ 
+$ make 
+
+```
+
+## limpiar archivos *.class:
+```bash
+$ make clean
 
 ```
 

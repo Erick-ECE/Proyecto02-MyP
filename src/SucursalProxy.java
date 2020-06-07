@@ -20,7 +20,7 @@ public class SucursalProxy implements InterfazConsulta{
      * @return id 
      */
     public int getId(){ return sucursal.getId(); }
-
+ 
     /**
      * Método de la interfaz 
      * @param tipoDeDulce La descripcion del tipo de dulce que 

@@ -59,7 +59,7 @@ public class Repartidor {
         }
         System.out.println("Pedido entregado con éxito.");
     }
-    
+     
     /**
      * Método que regresa la información del repartidor
      */

@@ -9,4 +9,4 @@ public class ChocolateConAlmendras extends Dulce{
         // TODO Auto-generated method stub
         return super.getTipo();
     }
-}
+} 

@@ -9,4 +9,4 @@ public class GalletaSalada extends Galleta{
         return super.getTipo();
     }
     
-}
+} 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author Daniel Villegas & Erick Castro & Ricardo Desales 
  */
 public class Receta {
-
+ 
     //Nombre de la receta
     String nombre;
     //Lista con los ingredientes de la receta

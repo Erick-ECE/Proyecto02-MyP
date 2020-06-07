@@ -6,18 +6,18 @@ import java.util.ArrayList;
 * @version Junio 2020
 */
 
-public abstract class Sucursal implements Subject, InterfazConsulta{
+public class Sucursal implements Subject, InterfazConsulta{
 
     //Id de la sucursal
-    private int id;
+    public int id;
     //Dirección de la sucursal
-    private String direccion;
+    public String direccion;
     //Nombre del repostero encargado
-    private String reposteroEncargado;
+    public String reposteroEncargado;
     //Colección con el inventario de la sucursal
-    private Collection<Lote> inventario;
+    public Collection<Lote> inventario;
     //Referencia al jefe técnico 
-    private JefeTecnico jefeTecnico;
+    public JefeTecnico jefeTecnico;
     /**
      * Constructor de la sucursal
      * @param id Id de la sucursal
@@ -27,7 +27,7 @@ public abstract class Sucursal implements Subject, InterfazConsulta{
      * el comportamiento de la sucursal 
      */
     
-    Sucursal(){    }
+    
 
     Sucursal(int id, String direccion, String reposteroEncargado, 
               JefeTecnico jefeTecnico) {
@@ -70,14 +70,15 @@ public abstract class Sucursal implements Subject, InterfazConsulta{
      * Método que regresa la información de la sucursal
      */
     public void getInformacion() {
-        System.out.println("ID: " + id + "\n"+"Dirección: "+ direccion +
+        System.out.println("#################################################");
+        System.out.println("\nID: " + id + "\n"+"Dirección: "+ direccion +
         "\n" + "Repostero encargado: "+ reposteroEncargado+ "\n " );
         
         // imprime el inventario
         for (Lote l : inventario) {
             System.out.println(l);
         }
-    }
+    } 
     
     /**
      * @param lote Lote que se agregará al inventario

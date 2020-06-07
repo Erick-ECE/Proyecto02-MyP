@@ -13,5 +13,5 @@ public class Lote {
     public String toString() {
         return "Lote [tipo=" + tipo + "]";
     }
-    
+     
 }

@@ -46,7 +46,7 @@ public class Almacen {
                 i.aumentarCantidad(100);
                 break;
             }
-        }
+        } 
     }
 
     //Método para reducir cantidad de ingrediente consumido por receta

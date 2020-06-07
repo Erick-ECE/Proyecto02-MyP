@@ -4,4 +4,4 @@ public abstract class Galleta {
     public String getTipo(){
         return tipo;
     }
-}
+} 

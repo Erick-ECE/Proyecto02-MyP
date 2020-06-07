@@ -8,4 +8,4 @@ public class GalleteConChispas extends Galleta{
         // TODO Auto-generated method stub
         return super.getTipo();
     }
-}
+} 

@@ -25,5 +25,5 @@ public class GalleneitorAdapter implements Preparacion {
     public Lote prepararDulce(String p) {
         Lote l = new Lote(galleneitor.prepararDulce(p));
         return l;
-    }
+    } 
 }
