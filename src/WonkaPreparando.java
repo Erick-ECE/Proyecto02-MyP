@@ -9,48 +9,15 @@ public class WonkaPreparando implements Estado{
     //Método para la preparación de dulces
     public void preparaDulce(String dulce){
 
-        /**
-         * TODO : 
-         *  Validar pedido con almacen antes de preparar
-         *  en caso de faltar ingredientes, reabastecer.
-         */
+        maquina.validarPedido(dulce);
 
         if(dulce == "Galleta Rellena" || dulce == "Galleta Salada" || dulce == "Galleta con Chispas"){
             maquina.galleneitorAdapter.prepararDulce(dulce);
         }
         else{
-            // llama a wonka.preparaDulce(dulce);
+            maquina.prepararDulce(dulce);
         }
-        /*
-        * TODO
-        ////PSEUDOCODIGO///
-                    receta = maquina.getReceta(dulce)
-                    metodo Factory
-                    creaDulce(...){
-                        //Wonka O GalleinatorAdapter:
-                        (if dulce= galleta){
-                            GalleinatorAdapter.prepararDulce(dulce){
-                                //por implementar//
-                                eligeMolde();
-                                void poneMezcla();
-                                void ingredientesExtra();
-                                //por implementar//
-                            }
-                        }else{
-                            Wonka.prepararDulce(dulce){
-                                //por implementar//
-                                eligeMolde();
-                                void poneMezcla();
-                                void ingredientesExtra();
-                                //por implementar//
-                            }
-                        }
-                
-                    }
-        ....
-        ////PSEUDOCODIGO///
-        
-        */
+       
     }
 
     //Método no implementado en este estado
@@ -63,18 +30,16 @@ public class WonkaPreparando implements Estado{
     }
 
     //Método para reabastecer en bodega en caso de que un ingrediente sea insuficiente
-    public void reabastecer(Ingrediente ingrediente){
-        /*
-        * TODO
-        ////PSEUDOCODIGO///
-            ....hacer reabastecimiento con métodos del almacén/bodega...
-        ....
-        ////PSEUDOCODIGO///
-        */
+    @Override
+    public void reabastecer(Ingrediente ingrediente) {
+        // TODO Auto-generated method stub
+
     }
 
     //Método no implementado en este estado
     public void apagar(){
         System.out.println("Primero termino de preparar...\n");
     }
+
+    
 }
