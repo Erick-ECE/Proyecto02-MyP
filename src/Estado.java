@@ -12,4 +12,6 @@ public interface Estado {
     public void reabastecer(Ingrediente ingrediente);
     //Método para apagar la máquina
     public void apagar();
+    // metodo para regresar el nombre del estado actual
+    public void getNombre();
 }

@@ -26,12 +26,24 @@ public class JefeTecnico implements Observer {
     /**
      * Constructor jefe tecnico
      */
+    public JefeTecnico(Wonka wonka) {
+        this.wonka = wonka;
+        this.repartidores = new Repartidor[10];
+        this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
+        this.wonka.dameEstadoActual();
+    }
+
+
     public JefeTecnico(Wonka wonka, ArrayList<SucursalProxy> sucursalProxys ) {
         this.wonka = wonka;
         this.sucursalProxys = sucursalProxys;
         this.repartidores = new Repartidor[10];
-        this.wonka.asignarEstadoActual(maquina.getEstadoEncendido());
+        this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
         this.wonka.dameEstadoActual();
+    }
+
+    public void agregaProxys(SucursalProxy sucursal){
+        this.sucursalProxys.add(sucursal);
     }
     
     //suponiendo que lo que se tiene que construir ya lo está
@@ -116,4 +128,6 @@ public class JefeTecnico implements Observer {
     public Repartidor[] getRepartidores() {
         return repartidores;
     }
+
+    
 } 

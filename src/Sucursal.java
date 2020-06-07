@@ -26,7 +26,7 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
      * @param jefeTecnico Referencia al jefe técnico que supervisa
      * el comportamiento de la sucursal 
      */
-    
+
     // Sucursal(int id, String direccion, String reposteroEncargado, 
     //         JefeTecnico jefeTecnico) {
     //     this.id = id;
@@ -101,6 +101,7 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
    public void notify(ArrayList<String> o){
         this.realizarPedido(o);
    }
+
 
 
 }
