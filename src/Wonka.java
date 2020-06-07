@@ -16,7 +16,7 @@ public class Wonka implements Preparacion{
     //Referencia al almacen
     private Almacen almacen;
     //Referencia al adaptador  
-    private GalleneitorAdapter galleneitorAdapter;
+    public GalleneitorAdapter galleneitorAdapter;
 
   /*
   *Constructor para Wonka. Construye la máquina con sus estados 

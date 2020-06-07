@@ -8,6 +8,13 @@ public class WonkaPreparando implements Estado{
     }
     //Método para la preparación de dulces
     public void preparaDulce(String dulce){
+
+        /**
+         * TODO : 
+         *  Validar pedido con almacen antes de preparar
+         *  en caso de faltar ingredientes, reabastecer.
+         */
+
         if(dulce == "Galleta Rellena" || dulce == "Galleta Salada" || dulce == "Galleta con Chispas"){
             maquina.galleneitorAdapter.prepararDulce(dulce);
         }
