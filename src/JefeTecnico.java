@@ -23,7 +23,12 @@ public class JefeTecnico implements Observer {
     //Referencia a la máquina wonka que utiliza
     Wonka wonka;
 
-
+    /**
+     * Constructor jefe tecnico
+     */
+    public JefeTecnico() {
+    }
+    
     //suponiendo que lo que se tiene que construir ya lo está
     
     /**
@@ -98,6 +103,8 @@ public class JefeTecnico implements Observer {
     public void update(ArrayList<String> pedido, int id) {
         recibirPedido(pedido, id);
     }
+
+    
 
 
 } 

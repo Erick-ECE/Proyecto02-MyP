@@ -27,7 +27,7 @@ public class SucursalProxy implements InterfazConsulta{
      * se desea buscar
      */
     @Override 
-    public int consultarInventario(final String tipoDeDulce) {
+    public int consultarInventario(String tipoDeDulce) {
         return sucursal.consultarInventario(tipoDeDulce);
     }
 

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 /**
  * DulceriaRosa
@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class DulceriaRosa {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Sucursal sucursal;
+        
         int opcion;
         
         char v = 92;
@@ -19,36 +20,7 @@ public class DulceriaRosa {
         "     )   /(  O )"+v+"___ "+v+"/    "+v+"        \n"+
         "    (__"+v+"_) "+v+"__/ (____/"+v+"_/"+v+"_/  \n");
 
-        System.out.println("Bienvenido! ¿Que desea hacer?");
-        System.out.println("1. Preparar Gomitas  "+
-                           "2. Preparar Chocolate "+
-                           "3. Preparar Galletas "+
-                           "4. Consutar " );
-
-
-        opcion = s.nextInt();
-        switch (opcion) {
-            case 1:
-                // llamamos wonka 3000 preparamos gomitas
-                break;
-            
-            case 2 :
-                // llamamos wonka 3000 preparamos chocolate
-                break;
-
-            case 3:
-            // TODO
-                break;
-            case 4:
-            // TODO
-                break;
-                
-            default:
-                break;
-        }
-
-
-        /**
+           /**
          * TODO
          * aqui se crea jefe tecnico
          * Se crea Sucursal 1, 2 y 3
@@ -61,7 +33,6 @@ public class DulceriaRosa {
          * y
          * se hacen los pasos de una simulación con los casos pedidos en el documento
         */
-
-        s.close();
+       
     }
 }
