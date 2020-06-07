@@ -204,7 +204,7 @@ public class Wonka implements Preparacion{
     //se "acompletan en el almacen"
     for(Ingrediente i : paraLote.getReceta()) {
         estadoActual.reabastecer(i);
-    }
+    } 
   }
 
   /**

@@ -15,4 +15,4 @@ public interface InterfazConsulta {
     */
     public int consultarInventario(String tipo);
   
-}
+} 

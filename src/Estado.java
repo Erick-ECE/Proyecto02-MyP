@@ -14,4 +14,4 @@ public interface Estado {
     public void apagar();
     // metodo para regresar el nombre del estado actual
     public void getNombre();
-}
+} 

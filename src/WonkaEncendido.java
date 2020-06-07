@@ -40,4 +40,4 @@ public class WonkaEncendido implements Estado{
     public void getNombre(){
         System.out.println("Estado actual: Encendido\n");
     }
-}
+} 

@@ -1,7 +1,7 @@
 public class Ingrediente {
     String nombre;
     int cantidad;
-
+ 
     public Ingrediente(String nombre, int cantidad) {
         this.nombre = nombre;
         this.cantidad = cantidad;

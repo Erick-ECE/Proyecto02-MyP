@@ -21,11 +21,11 @@ public class DulceriaRosa {
         
         Wonka wonka = new Wonka(new GalleneitorAdapter(new Galleneitor()));
         JefeTecnico jefetecnico = new JefeTecnico(wonka);
-        Sucursal suc1 = new Sucursal1(1,"Tlalnepantla", "Erick", jefetecnico);
+        Sucursal suc1 = new Sucursal(1,"Tlalnepantla", "Erick", jefetecnico);
         suc1.setInventario(new ArrayList<Lote>());
-        Sucursal suc2 = new Sucursal2(2,"Iztacalco", "Ricardo", jefetecnico);
+        Sucursal suc2 = new Sucursal(2,"Iztacalco", "Ricardo", jefetecnico);
         suc2.setInventario(new LinkedList<Lote>());
-        Sucursal suc3 = new Sucursal3(3,"Naucalpan", "Daniel", jefetecnico);
+        Sucursal suc3 = new Sucursal(3,"Naucalpan", "Daniel", jefetecnico);
         suc3.setInventario(new HashSet<Lote>());
         ArrayList<Sucursal> sucursales = new ArrayList<>();
         SucursalProxy s1 = new SucursalProxy(suc1);
@@ -82,7 +82,7 @@ public class DulceriaRosa {
         wonka.getAlmacen().agregarIngrediente(sal);
         wonka.getAlmacen().agregarIngrediente(chispas);
         wonka.getAlmacen().agregarIngrediente(mermelada);
-        
+         
 
         ArrayList<String> pedido1 = new ArrayList<>();
             pedido1.add("Galleta Salada");

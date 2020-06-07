@@ -5,7 +5,7 @@ public class Galleneitor {
     Galleta g; // galleta a preparar
 
     public Galleneitor() {
-    }
+    } 
 
     public String prepararDulce(String p) {
         prepararMasa(p);

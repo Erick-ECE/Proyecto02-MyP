@@ -16,4 +16,4 @@ public interface Subject {
     //Método que realiza la notificación al observador
     public void notify(ArrayList<String> o); 
 }
-
+ 

@@ -10,4 +10,4 @@ public interface Observer {
     //Método update de la interfaz 
     public void update(ArrayList<String> pedido, int id); 
 
-}
+} 

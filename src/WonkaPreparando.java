@@ -20,7 +20,7 @@ public class WonkaPreparando implements Estado{
         maquina.asignarEstadoActual(maquina.getEstadoEmpacando());
         maquina.getEstadoActual().darLote(maquina.getLotePreparado());
        
-    }
+    } 
 
     //Método no implementado en este estado
     public void empacarDulce(Lote lote){
