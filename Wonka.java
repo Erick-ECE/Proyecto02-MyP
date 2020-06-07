@@ -173,7 +173,7 @@ public class Wonka implements Preparacion{
    * @param p El pedido que recibe la máquina
    * @return true Si el pedido es aceptado, false en otro caso
    */
-  public boolean validarPedido(String p) {
+  public void validarPedido(String p) {
     Receta dulce = null;
     //Encuentra la receta del dulce
     for (Receta r : recetario){
@@ -182,7 +182,22 @@ public class Wonka implements Preparacion{
     }
     //Hasta este punto, tenemos la receta para un único dulce,
     //recordemos que hemos dicho que un lote tiene 250 unidades 
-
+    int cant = 250;
+    Receta paraLote = new Receta(dulce.getNombre(),dulce.getReceta());
+    //Creamos la receta para los 250 items del lote
+    for (Ingrediente i : paraLote.getReceta()){
+      i.aumentarCantidad(i.getCantidad()*(cant-1));
+    }
+    //Comparamos la cantidad de ingredientes en el almacen con los que 
+    //se requiere en la receta, de tal manera que todos los faltantes
+    //se "acompletan en el almacen"
+    for(Ingrediente i : paraLote.getReceta()) {
+      while(almacen.getCantidadDeIngrediente(i.getNombre())<i.getCantidad()){
+        System.out.println("No se cuenta con suficiente "+i.getNombre()+
+                          " para la receta...");
+        almacen.reabastecerIngrediente(i.getNombre());
+      }
+    }
   }
 
   /**
