@@ -6,7 +6,7 @@ import java.util.ArrayList;
 * @version Junio 2020
 */
 
-public  class Sucursal1 extends Sucursal {
+public  class Sucursal1 extends Sucursal  {
 
     //Id de la sucursal
     private int id;
@@ -28,7 +28,7 @@ public  class Sucursal1 extends Sucursal {
      */
     Sucursal1(int id, String direccion, String reposteroEncargado,JefeTecnico jefeTecnico) {
         this.id = id;
-        this.direccion= direccion;
+        this. direccion = direccion;
         this.reposteroEncargado = reposteroEncargado;
         this.add(jefeTecnico);
         this.inventario = new ArrayList<Lote>();

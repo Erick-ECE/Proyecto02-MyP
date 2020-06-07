@@ -36,4 +36,6 @@ public  class Sucursal3 extends Sucursal {
         this.add(jefeTecnico);
         this.inventario = new HashSet<Lote>();
     }
+
+   
 }

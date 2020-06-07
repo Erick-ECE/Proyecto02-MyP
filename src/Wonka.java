@@ -105,6 +105,7 @@ public class Wonka implements Preparacion{
     lotePreparado = new Lote("");
 
     this.dameEstadoActual();
+    almacen = new Almacen();
   }
 
   public void dameEstadoActual(){
@@ -257,4 +258,14 @@ public class Wonka implements Preparacion{
   public Estado getEstadoActual() {
     return estadoActual;
   }
+
+  public Almacen getAlmacen() {
+    return almacen;
+  }
+
+  public void setAlmacen(Almacen almacen) {
+    this.almacen = almacen;
+  }
+
+  
 }

@@ -42,8 +42,8 @@ public class Almacen {
         //Integer cantidadActual = ingredientes.get(ingrediente);
         //ingredientes.put(ingrediente,cantidadActual+150);
         for(Ingrediente i : ingredientes){
-            if(i.getNombre().equals(ingrediente)){
-                i.aumentarCantidad(150);
+            if(i.getNombre().equalsIgnoreCase(ingrediente)){
+                i.aumentarCantidad(1000);
                 break;
             }
         }

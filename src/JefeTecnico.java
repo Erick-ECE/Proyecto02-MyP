@@ -31,16 +31,17 @@ public class JefeTecnico implements Observer {
         this.repartidores = new Repartidor[10];
         this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
         this.wonka.dameEstadoActual();
+        this.sucursalProxys = new ArrayList<>();
     }
 
 
-    public JefeTecnico(Wonka wonka, ArrayList<SucursalProxy> sucursalProxys ) {
-        this.wonka = wonka;
-        this.sucursalProxys = sucursalProxys;
-        this.repartidores = new Repartidor[10];
-        this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
-        this.wonka.dameEstadoActual();
-    }
+    // public JefeTecnico(Wonka wonka, ArrayList<SucursalProxy> sucursalProxys ) {
+    //     this.wonka = wonka;
+    //     this.sucursalProxys = sucursalProxys;
+    //     this.repartidores = new Repartidor[10];
+    //     this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
+    //     this.wonka.dameEstadoActual();
+    // }
 
     public void agregaProxys(SucursalProxy sucursal){
         this.sucursalProxys.add(sucursal);

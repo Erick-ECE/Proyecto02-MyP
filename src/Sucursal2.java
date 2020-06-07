@@ -36,4 +36,5 @@ public  class Sucursal2 extends Sucursal {
         this.inventario = new LinkedList<Lote>();
     }
   
+    
 }

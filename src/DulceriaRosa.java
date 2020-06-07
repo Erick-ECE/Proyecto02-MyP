@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 /**
  * DulceriaRosa
@@ -20,8 +22,11 @@ public class DulceriaRosa {
         Wonka wonka = new Wonka(new GalleneitorAdapter(new Galleneitor()));
         JefeTecnico jefetecnico = new JefeTecnico(wonka);
         Sucursal suc1 = new Sucursal1(1,"Tlalnepantla", "Erick", jefetecnico);
+        suc1.setInventario(new ArrayList<Lote>());
         Sucursal suc2 = new Sucursal2(2,"Iztacalco", "Ricardo", jefetecnico);
+        suc2.setInventario(new LinkedList<Lote>());
         Sucursal suc3 = new Sucursal3(3,"Naucalpan", "Daniel", jefetecnico);
+        suc3.setInventario(new HashSet<Lote>());
         ArrayList<Sucursal> sucursales = new ArrayList<>();
         SucursalProxy s1 = new SucursalProxy(suc1);
         SucursalProxy s2 = new SucursalProxy(suc2);
@@ -46,9 +51,9 @@ public class DulceriaRosa {
         jefetecnico.agregaProxys(s2);
         jefetecnico.agregaProxys(s3);
 
-        Ingrediente almendras = new Ingrediente("almendras", 5000);
-        Ingrediente cacao = new Ingrediente("cacao", 5000);
-        Ingrediente leche = new Ingrediente("leche", 5000);
+        Ingrediente almendras = new Ingrediente("Almendras", 5000);
+        Ingrediente cacao = new Ingrediente("Cacao", 5000);
+        Ingrediente leche = new Ingrediente("Leche", 5000);
         Ingrediente mantecaCacao = new Ingrediente("manteca de cacao", 5000);
         Ingrediente grenetina = new Ingrediente("grenetina ", 5000);
         Ingrediente agua = new Ingrediente("agua ", 5000);
@@ -56,7 +61,7 @@ public class DulceriaRosa {
         Ingrediente azucar = new Ingrediente("azucar", 5000);
         Ingrediente saborizante = new Ingrediente("saborizante acido", 5000);
         Ingrediente chamoy = new Ingrediente("chamoy", 5000);
-        Ingrediente harina = new Ingrediente("harina", 5000);
+        Ingrediente harina = new Ingrediente("Harina", 5000);
         Ingrediente huevo = new Ingrediente("huevo", 5000);
         Ingrediente sal = new Ingrediente("sal", 5000);
         Ingrediente chispas = new Ingrediente("chispas de chocolate", 5000);
@@ -77,6 +82,7 @@ public class DulceriaRosa {
             pedido3.add("Galleta Rellena");
             pedido3.add("Gusanos Acidos");
             
+        //System.out.println(suc1.getInventario()==null);
         // sucursal 1 realiza el primer pedido
         suc1.notify(pedido1);
         // sucursal 2 realisa el segundo pedido

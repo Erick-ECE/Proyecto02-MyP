@@ -18,7 +18,7 @@ public class WonkaPreparando implements Estado{
         }
 
         maquina.asignarEstadoActual(maquina.getEstadoEmpacando());
-        maquina.getEstadoActual().darLote(lotePreparado);
+        maquina.getEstadoActual().darLote(maquina.getLotePreparado());
        
     }
 

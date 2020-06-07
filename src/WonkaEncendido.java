@@ -21,12 +21,13 @@ public class WonkaEncendido implements Estado{
     }
     
     //Método para reabastecer en bodega en caso de que un ingrediente sea insuficiente
-    public void reabastecer(Ingrediente ingrediente){
+    public void reabastecer(Ingrediente i){
         maquina.dameEstadoActual();
-        while(almacen.getCantidadDeIngrediente(i.getNombre())<i.getCantidad()){
+        //System.out.println(maquina.getAlmacen()==null);
+        while(maquina.getAlmacen().getCantidadDeIngrediente(i.getNombre())<i.getCantidad()){
             System.out.println("No se cuenta con suficiente "+i.getNombre()+
                                 " para la receta...");
-            almacen.reabastecerIngrediente(i.getNombre());
+            maquina.getAlmacen().reabastecerIngrediente(i.getNombre());
         }
     }
     //Método no implementado en este estado

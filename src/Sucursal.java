@@ -6,7 +6,7 @@ import java.util.ArrayList;
 * @version Junio 2020
 */
 
-public abstract class Sucursal implements InterfazConsulta, Subject {
+public abstract class Sucursal implements Subject, InterfazConsulta{
 
     //Id de la sucursal
     private int id;
@@ -26,14 +26,17 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
      * @param jefeTecnico Referencia al jefe técnico que supervisa
      * el comportamiento de la sucursal 
      */
+    
+    Sucursal(){    }
 
-    // Sucursal(int id, String direccion, String reposteroEncargado, 
-    //         JefeTecnico jefeTecnico) {
-    //     this.id = id;
-    //     this. direccion = direccion;
-    //     this.reposteroEncargado = reposteroEncargado;
-    //     this.add(jefeTecnico);
-    // }
+    Sucursal(int id, String direccion, String reposteroEncargado, 
+              JefeTecnico jefeTecnico) {
+          this.id = id;
+          this. direccion = direccion;
+          this.reposteroEncargado = reposteroEncargado;
+          this.add(jefeTecnico);
+   
+     }
 
     /**
      * Método que regresa el id de la sucursal
@@ -49,16 +52,19 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
         jefeTecnico.recibirPedido(pedido,id);
     }
 
-    @Override
-    public int consultarInventario(String tipo) {
-        // TODO Auto-generated method stub
-        int c = 0;
-        for (Lote l : inventario) {
-            if(l.getTipo().equals(tipo))
-                c++;
-        }
-        return c;
-    }
+     @Override
+     public int consultarInventario(String tipo) {
+         // TODO Auto-generated method stub
+         int c = 0;
+         if(this.inventario.isEmpty()){
+             return 0;
+         }
+         for (Lote l : this.inventario) {
+             if(l.getTipo().equals(tipo))
+                 c++;
+         }
+         return c;
+     }
 
     /**
      * Método que regresa la información de la sucursal
@@ -107,6 +113,14 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
         this.realizarPedido(o);
    }
 
+   public Collection<Lote> getInventario() {
+       return inventario;
+   }
 
+   public void setInventario(Collection<Lote> inventario) {
+       this.inventario = inventario;
+   }
+
+   
 
 }
