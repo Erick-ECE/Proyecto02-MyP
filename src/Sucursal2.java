@@ -1,12 +1,13 @@
-import java.util.Collection; 
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.ArrayList;
 /**
-* Sucursal. Clase para modelar una sucursal abstracta.
+* Sucursal. Clase para modelar una sucursal con una Lista Ligada.
 * @author Daniel Villegas & Erick Castro & Ricardo Desales
 * @version Junio 2020
 */
 
-public abstract class Sucursal implements InterfazConsulta, Subject {
+public  class Sucursal2 extends Sucursal {
 
     //Id de la sucursal
     private int id;
@@ -32,20 +33,7 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
         this. direccion = direccion;
         this.reposteroEncargado = reposteroEncargado;
         this.add(jefeTecnico);
-    }
-
-    /**
-     * Método que regresa el id de la sucursal
-     * @return id 
-     */
-    public int getId(){ return id ;}
-
-    /**
-     * Método que realiza un pedido
-     * @param pedido La cadena con el pedido 
-     */
-    public void realizarPedido(ArrayList<String> pedido) {
-        jefeTecnico.recibirPedido(pedido,id);
+        this.inventario = new LinkedList<Lote>();
     }
 
     @Override
@@ -59,14 +47,6 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
         return c;
     }
 
-    /**
-     * Método que regresa la información de la sucursal
-     */
-    public void getInformacion() {
-        System.out.println("ID: " + id + "\n"+"Dirección: "+ direccion +
-        "\n" + "Repostero encargado: "+ reposteroEncargado+ "\n " );
-    }
-    
     /**
      * @param lote Lote que se agregará al inventario
      */
@@ -83,23 +63,5 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
     public void add(JefeTecnico jefeTecnico){
         this.jefeTecnico = jefeTecnico; 
     }
-
-    /**
-    * * Método de la interfaz
-     * Método para eliminar un observador
-     * No se sobreescribe porque solo tiene un observador 
-     */
-   public void remove(Object o){}
-
-    /**
-    * * Método de la interfaz
-     * Método que realiza la notificación al observador
-     * No se sobreescribe porque solo tiene un observador 
-     */
-   @Override
-   public void notify(ArrayList<String> o){
-        this.realizarPedido(o);
-   }
-
-   
+  
 }
