@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 /**
-* Interfaz Subject. Es utilizada en el patron Observer. 
-* @author Daniel Villegas $ Erick Castro & Ricardo Desales 
-* @version Junio 2020 
-*/
+ * Interfaz Subject. Es utilizada en el patron Observer.
+ * 
+ * @author Daniel Villegas $ Erick Castro & Ricardo Desales
+ * @version Junio 2020
+ */
 
 public interface Subject {
 

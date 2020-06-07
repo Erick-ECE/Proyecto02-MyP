@@ -101,5 +101,5 @@ public class Sucursal implements InterfazConsulta, Subject {
         this.realizarPedido(o);
    }
 
-
+   
 }
