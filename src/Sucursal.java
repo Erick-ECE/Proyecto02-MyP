@@ -31,7 +31,7 @@ public class Sucursal implements InterfazConsulta, Subject {
         this.id = id;
         this. direccion = direccion;
         this.reposteroEncargado = reposteroEncargado;
-        this.jefeTecnico = jefeTecnico; 
+        this.add(jefeTecnico);
     }
 
     /**
@@ -79,7 +79,10 @@ public class Sucursal implements InterfazConsulta, Subject {
      * Método para agregar un observador
      * No se sobreescribe porque solo tiene un observador 
      */
-   public void add(Object o){}
+    @Override
+    public void add(JefeTecnico jefeTecnico){
+        this.jefeTecnico = jefeTecnico; 
+    }
 
     /**
     * * Método de la interfaz

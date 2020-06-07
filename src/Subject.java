@@ -7,7 +7,7 @@
 public interface Subject {
 
     //Método para agregar un observador
-    public void add(Object o);
+    public void add(JefeTecnico o);
     //Método para eliminar un observador
     public void remove(Object o);
     //Método que realiza la notificación al observador
