@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.ArrayList;
 /**
-* Sucursal. Clase para modelar una sucursal con una Lista Ligada.
+* Sucursal. Clase para modelar una sucursal con un HashSet.
 * @author Daniel Villegas & Erick Castro & Ricardo Desales
 * @version Junio 2020
 */
@@ -36,33 +36,4 @@ public  class Sucursal3 extends Sucursal {
         this.add(jefeTecnico);
         this.inventario = new HashSet<Lote>();
     }
-
-    @Override
-    public int consultarInventario(String tipo) {
-        // TODO Auto-generated method stub
-        int c = 0;
-        for (Lote l : inventario) {
-            if(l.getTipo().equals(tipo))
-                c++;
-        }
-        return c;
-    }
-
-    /**
-     * @param lote Lote que se agregará al inventario
-     */
-   public void agregarLote(Lote lote) {
-       inventario.add(lote);
-   }
-
-    /**
-    * * Método de la interfaz
-     * Método para agregar un observador
-     * No se sobreescribe porque solo tiene un observador 
-     */
-    @Override
-    public void add(JefeTecnico jefeTecnico){
-        this.jefeTecnico = jefeTecnico; 
-    }
-  
 }
