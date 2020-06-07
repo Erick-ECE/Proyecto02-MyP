@@ -26,13 +26,14 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
      * @param jefeTecnico Referencia al jefe técnico que supervisa
      * el comportamiento de la sucursal 
      */
-    Sucursal(int id, String direccion, String reposteroEncargado, 
-            JefeTecnico jefeTecnico) {
-        this.id = id;
-        this. direccion = direccion;
-        this.reposteroEncargado = reposteroEncargado;
-        this.add(jefeTecnico);
-    }
+    
+    // Sucursal(int id, String direccion, String reposteroEncargado, 
+    //         JefeTecnico jefeTecnico) {
+    //     this.id = id;
+    //     this. direccion = direccion;
+    //     this.reposteroEncargado = reposteroEncargado;
+    //     this.add(jefeTecnico);
+    // }
 
     /**
      * Método que regresa el id de la sucursal
@@ -101,5 +102,5 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
         this.realizarPedido(o);
    }
 
-   
+
 }
