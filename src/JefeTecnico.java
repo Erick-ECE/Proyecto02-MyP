@@ -30,6 +30,8 @@ public class JefeTecnico implements Observer {
         this.wonka = wonka;
         this.sucursalProxys = sucursalProxys;
         this.repartidores = new Repartidor[10];
+        this.wonka.asignarEstadoActual(maquina.getEstadoEncendido());
+        this.wonka.dameEstadoActual();
     }
     
     //suponiendo que lo que se tiene que construir ya lo está
@@ -52,12 +54,16 @@ public class JefeTecnico implements Observer {
         for(String p : pedido ){
             if (proxy.consultarInventario(p) == 0) {
                 //No hay, entonces preparas
-                wonka.validarPedido(p);    
-                pedidoTotal.add(wonka.prepararDulce(p));
+                wonka.validarPedido(p);
+                wonka.getEstadoActual().preparaDulce(p);
+                pedidoTotal.add(wonka.getLotePreparado());
+                wonka.setLotePreparado(new Lote());
             } else {
                 System.out.println("Tienes, pa que quieres \n");
             }
         }
+
+        this.asignarReparticiones(pedidoTotal, id, this.getRepartidores());
     }
 
     
@@ -107,7 +113,7 @@ public class JefeTecnico implements Observer {
         recibirPedido(pedido, id);
     }
 
-    
-
-
+    public Repartidor[] getRepartidores() {
+        return repartidores;
+    }
 } 

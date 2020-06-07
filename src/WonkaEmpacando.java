@@ -1,6 +1,7 @@
 public class WonkaEmpacando implements Estado{
     
     private Wonka maquina;
+    public String nombre = "Empacando";
 
     /**
      * Constructor del estado
@@ -20,9 +21,9 @@ public class WonkaEmpacando implements Estado{
     }
     //Método para entregar lotes a sucursales por medio de repartidores
     public void darLote(Lote lote){
-        /*
-        * TODO
-        */
+        maquina.dameEstadoActual();
+        this.empacarDulce(lote);
+        maquina.asignarEstadoActual(maquina.getEstadoEncendido());
     }
     //Método no implementado en este estado
     public void reabastecer(Ingrediente ingrediente){

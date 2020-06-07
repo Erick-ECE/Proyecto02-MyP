@@ -25,6 +25,7 @@ public class DulceriaRosa {
          * aqui se crea jefe tecnico
          * Se crea Sucursal 1, 2 y 3
          * Se crean Repatidores y se agregan a JT
+         * Se asignan sucursales a Repartidores en su contructor
          * Se agregan Proxys de sucursales a JT
          * asignas proxys a sucursales y proxys a JT
          * Se agregan ingredientes con cantidades iniciales

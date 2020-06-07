@@ -1,6 +1,6 @@
 public class WonkaPreparando implements Estado{
     Wonka maquina;
-
+    public String nombre = "Preparando";
 
     //Constructor para Wonka Preparando
     WonkaPreparando(Wonka maquina){
@@ -8,15 +8,17 @@ public class WonkaPreparando implements Estado{
     }
     //Método para la preparación de dulces
     public void preparaDulce(String dulce){
-
-        maquina.validarPedido(dulce);
+        maquina.dameEstadoActual();
 
         if(dulce == "Galleta Rellena" || dulce == "Galleta Salada" || dulce == "Galleta con Chispas"){
-            maquina.galleneitorAdapter.prepararDulce(dulce);
+            maquina.setLotePreparado(maquina.galleneitorAdapter.prepararDulce(dulce));
         }
         else{
-            maquina.prepararDulce(dulce);
+            maquina.setLotePreparado(maquina.prepararDulce(dulce));
         }
+
+        maquina.asignarEstadoActual(maquina.getEstadoEmpacando());
+        maquina.getEstadoActual().darLote(lotePreparado);
        
     }
 
@@ -29,11 +31,10 @@ public class WonkaPreparando implements Estado{
         System.out.println("Aquí no puedo entregar, primero prepara un lote\n");
     }
 
-    //Método para reabastecer en bodega en caso de que un ingrediente sea insuficiente
+    //Método no implementado en este estado
     @Override
     public void reabastecer(Ingrediente ingrediente) {
-        // TODO Auto-generated method stub
-
+        System.out.println("Primero termina de preparar\n");
     }
 
     //Método no implementado en este estado

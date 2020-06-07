@@ -1,5 +1,6 @@
 public class WonkaApagado implements Estado{
     private Wonka maquina;
+    public String nombre = "Apagado";
 
     WonkaApagado(Wonka maquina){
         this.maquina = maquina;

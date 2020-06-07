@@ -17,6 +17,8 @@ public class Wonka implements Preparacion{
     private Almacen almacen;
     //Referencia al adaptador  
     public GalleneitorAdapter galleneitorAdapter;
+    //lote local que genera Wonka en una iteración
+    public Lote lotePreparado;
 
   /*
   *Constructor para Wonka. Construye la máquina con sus estados 
@@ -100,7 +102,17 @@ public class Wonka implements Preparacion{
     recetario.add(galletasRellenas);
     recetario.add(galletasConChispas);
 
+    lotePreparado = new Lote();
+
+    this.dameEstadoActual();
   }
+
+  
+
+  public void dameEstadoActual(){
+    System.out.println("mi estado actual es" + this.getEstadoActual().nombre + " \n");
+  }
+
 
   /**
    * Método que determina el estado actual de la maquina
@@ -192,11 +204,7 @@ public class Wonka implements Preparacion{
     //se requiere en la receta, de tal manera que todos los faltantes
     //se "acompletan en el almacen"
     for(Ingrediente i : paraLote.getReceta()) {
-      while(almacen.getCantidadDeIngrediente(i.getNombre())<i.getCantidad()){
-        System.out.println("No se cuenta con suficiente "+i.getNombre()+
-                          " para la receta...");
-        almacen.reabastecerIngrediente(i.getNombre());
-      }
+        estadoActual.reabastecer(i);
     }
   }
 
@@ -232,5 +240,23 @@ public class Wonka implements Preparacion{
       default:
         return new Lote("");
     }
+  }
+
+  /**
+   * Método que retorna el lote preparado global
+   */
+  public Lote getLotePreparado() {
+    return lotePreparado;
+  }
+
+  /**
+   * Método que asigna el lote preparado global
+   */
+  public void setLotePreparado(Lote lotePreparado) {
+    this.lotePreparado = lotePreparado;
+  }
+
+  public Estado getEstadoActual() {
+    return estadoActual;
   }
 }
