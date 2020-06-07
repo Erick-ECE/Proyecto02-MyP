@@ -51,29 +51,45 @@ public class DulceriaRosa {
         jefetecnico.agregaProxys(s2);
         jefetecnico.agregaProxys(s3);
 
-        Ingrediente almendras = new Ingrediente("Almendras", 5000);
-        Ingrediente cacao = new Ingrediente("Cacao", 5000);
-        Ingrediente leche = new Ingrediente("Leche", 5000);
+        Ingrediente almendras = new Ingrediente("almendras", 5000);
+        Ingrediente cacao = new Ingrediente("cacao", 5000);
+        Ingrediente leche = new Ingrediente("leche", 5000);
         Ingrediente mantecaCacao = new Ingrediente("manteca de cacao", 5000);
-        Ingrediente grenetina = new Ingrediente("grenetina ", 5000);
-        Ingrediente agua = new Ingrediente("agua ", 5000);
-        Ingrediente mielMaiz = new Ingrediente("miel de maiz", 5000);
+        Ingrediente grenetina = new Ingrediente("Grenetina", 5000);
+        Ingrediente Agua = new Ingrediente("Agua", 5000);
+        Ingrediente mielMaiz = new Ingrediente("Miel de maiz", 5000);
         Ingrediente azucar = new Ingrediente("azucar", 5000);
         Ingrediente saborizante = new Ingrediente("saborizante acido", 5000);
-        Ingrediente chamoy = new Ingrediente("chamoy", 5000);
-        Ingrediente harina = new Ingrediente("Harina", 5000);
-        Ingrediente huevo = new Ingrediente("huevo", 5000);
-        Ingrediente sal = new Ingrediente("sal", 5000);
-        Ingrediente chispas = new Ingrediente("chispas de chocolate", 5000);
-        Ingrediente mermelada = new Ingrediente("mermelada", 5000);
+        Ingrediente chamoy = new Ingrediente("Chamoy", 5000);
+        Ingrediente harina = new Ingrediente("harina", 5000);
+        Ingrediente huevo = new Ingrediente("Huevo", 5000);
+        Ingrediente sal = new Ingrediente("Sal", 5000);
+        Ingrediente chispas = new Ingrediente("Chispas", 5000);
+        Ingrediente mermelada = new Ingrediente("Mermelada", 5000);
+
+        wonka.getAlmacen().agregarIngrediente(almendras);
+        wonka.getAlmacen().agregarIngrediente(cacao);
+        wonka.getAlmacen().agregarIngrediente(leche);
+        wonka.getAlmacen().agregarIngrediente(mantecaCacao);
+        wonka.getAlmacen().agregarIngrediente(grenetina);
+        wonka.getAlmacen().agregarIngrediente(Agua);
+        wonka.getAlmacen().agregarIngrediente(mielMaiz);
+        wonka.getAlmacen().agregarIngrediente(azucar);
+        wonka.getAlmacen().agregarIngrediente(saborizante);
+        wonka.getAlmacen().agregarIngrediente(chamoy);
+        wonka.getAlmacen().agregarIngrediente(harina);
+        wonka.getAlmacen().agregarIngrediente(huevo);
+        wonka.getAlmacen().agregarIngrediente(sal);
+        wonka.getAlmacen().agregarIngrediente(chispas);
+        wonka.getAlmacen().agregarIngrediente(mermelada);
         
+
         ArrayList<String> pedido1 = new ArrayList<>();
             pedido1.add("Galleta Salada");
             pedido1.add("Frutas Chamoy");
             pedido1.add("Ositos Dulces");
         
         ArrayList<String> pedido2 = new ArrayList<>();
-            pedido2.add("Galleta Salada");
             pedido2.add("Frutas Chamoy");
             pedido2.add("Ositos Dulces");
             pedido2.add("Chocolate con almendras");

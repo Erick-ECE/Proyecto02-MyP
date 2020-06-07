@@ -24,7 +24,8 @@ public class WonkaEncendido implements Estado{
     public void reabastecer(Ingrediente i){
         maquina.dameEstadoActual();
         //System.out.println(maquina.getAlmacen()==null);
-        while(maquina.getAlmacen().getCantidadDeIngrediente(i.getNombre())<i.getCantidad()){
+        while(maquina.getAlmacen().getCantidadDeIngrediente(i.getNombre()) < i.getCantidad()){
+            
             System.out.println("No se cuenta con suficiente "+i.getNombre()+
                                 " para la receta...");
             maquina.getAlmacen().reabastecerIngrediente(i.getNombre());

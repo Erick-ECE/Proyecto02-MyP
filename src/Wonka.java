@@ -34,11 +34,11 @@ public class Wonka implements Preparacion{
     this.galleneitorAdapter = galleneitorAdapter;
 
     // Se guardan las recetas en el recetario de la máquina
-    ArrayList<Ingrediente> chocoLeche = new ArrayList<>();
-    chocoLeche.add(new Ingrediente("manteca de cacao", 15));
-    chocoLeche.add(new Ingrediente("azucar", 10));
-    chocoLeche.add(new Ingrediente("leche", 15));
-    Receta chocolateConLeche = new Receta("Chocolate con leche", chocoLeche);
+    ArrayList<Ingrediente> chocoleche = new ArrayList<>();
+    chocoleche.add(new Ingrediente("manteca de cacao", 15));
+    chocoleche.add(new Ingrediente("azucar", 10));
+    chocoleche.add(new Ingrediente("leche", 15));
+    Receta chocolateConleche = new Receta("Chocolate con leche", chocoleche);
 
     ArrayList<Ingrediente> chocoObs = new ArrayList<>();
     chocoObs.add(new Ingrediente("manteca de cacao", 35));
@@ -53,7 +53,7 @@ public class Wonka implements Preparacion{
     Receta chocolateConAlmendras = new Receta("Chocolate con almendras", chocAlmen);
     /*----------------------------------------------------*/
     recetario.add(chocolateConAlmendras);
-    recetario.add(chocolateConLeche);
+    recetario.add(chocolateConleche);
     recetario.add(chocolateObscuro);
     /*----------------------------------------------------*/
     ArrayList<Ingrediente> ositoDulce = new ArrayList<>();
@@ -80,20 +80,20 @@ public class Wonka implements Preparacion{
     /*-------------------------------------------------------*/
 
     ArrayList<Ingrediente> gallSaladas = new ArrayList<>();
-    gallSaladas.add(new Ingrediente("Harina", 20));
+    gallSaladas.add(new Ingrediente("harina", 20));
     gallSaladas.add(new Ingrediente("Agua", 10));
     gallSaladas.add(new Ingrediente("Huevo", 1));
     gallSaladas.add(new Ingrediente("Sal", 3));
     Receta galletasSaladas = new Receta("Galleta Salada", gallSaladas);
     ArrayList<Ingrediente> gallRell = new ArrayList<>();
-    gallRell.add(new Ingrediente("Harina", 24));
-    gallRell.add(new Ingrediente("Leche", 10));
+    gallRell.add(new Ingrediente("harina", 24));
+    gallRell.add(new Ingrediente("leche", 10));
     gallRell.add(new Ingrediente("Huevo", 1));
     gallRell.add(new Ingrediente("Mermelada", 5));
     Receta galletasRellenas = new Receta("Galleta Rellena", gallRell);
     ArrayList<Ingrediente> gallChisp = new ArrayList<>();
-    gallSaladas.add(new Ingrediente("Harina", 23));
-    gallSaladas.add(new Ingrediente("Leche", 12));
+    gallSaladas.add(new Ingrediente("harina", 23));
+    gallSaladas.add(new Ingrediente("leche", 12));
     gallSaladas.add(new Ingrediente("Huevo", 1));
     gallSaladas.add(new Ingrediente("Chispas", 7));
     Receta galletasConChispas = new Receta("Galleta con Chispas", gallChisp);
@@ -193,7 +193,7 @@ public class Wonka implements Preparacion{
     }
     //Hasta este punto, tenemos la receta para un único dulce,
     //recordemos que hemos dicho que un lote tiene 250 unidades 
-    int cant = 250;
+    int cant = 10;
     Receta paraLote = new Receta(dulce.getNombre(),dulce.getReceta());
     //Creamos la receta para los 250 items del lote
     for (Ingrediente i : paraLote.getReceta()){
@@ -230,7 +230,7 @@ public class Wonka implements Preparacion{
       case "Chocolate Con Almendras":
         return new Lote(new ChocolateConAlmendras().getTipo());
 
-      case "Chocolate Con Leche":
+      case "Chocolate Con leche":
         return new Lote(new ChocolateConAlmendras().getTipo());
 
       case "Chocolate Oscuro":

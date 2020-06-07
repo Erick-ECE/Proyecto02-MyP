@@ -32,6 +32,7 @@ public class JefeTecnico implements Observer {
         this.wonka.asignarEstadoActual(wonka.getEstadoEncendido());
         this.wonka.dameEstadoActual();
         this.sucursalProxys = new ArrayList<>();
+        this.rnd = new Random();
     }
 
 
@@ -87,8 +88,7 @@ public class JefeTecnico implements Observer {
      * @param id El id de la sucursar a la cual se enviará el pedido
      * @param repartidores Los repartidores posibles
      */
-    public void asignarReparticiones(ArrayList<Lote> pedido, int id, 
-    Repartidor[] repartidores){
+    public void asignarReparticiones(ArrayList<Lote> pedido, int id,Repartidor[] repartidores){
         int carro = rnd.nextInt(100);
         //Revisar elección de repartidor no null
         Repartidor r = null;
