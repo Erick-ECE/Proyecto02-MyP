@@ -3,6 +3,8 @@
 import java.util.ArrayList;
 //import java.util.Hashtable;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+
 /**
  * Clase Almacen para guardar los ingredientes
  */
@@ -59,5 +61,21 @@ public class Almacen {
                 break;
             }
         }
+    }
+
+    /**
+     * Método que regresa la cantidad que se encuentra almacenada en el
+     * almacen
+     * @param ingrediente El ingrediente a buscar
+     * @return La cantidad del ingrediente (un valor entero)
+     */
+    public int getCantidadDeIngrediente(String ingrediente) { 
+        int cantidad = 0;
+        for(Ingrediente i : ingredientes) {
+            if (i.getNombre().equalsIgnoreCase(ingrediente){
+                cantidad = i.getCantidad();
+            }
+        }
+        return cantidad; 
     }
 }
