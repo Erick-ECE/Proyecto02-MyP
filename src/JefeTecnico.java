@@ -44,15 +44,15 @@ public class JefeTecnico implements Observer {
         for(String p : pedido ){
             if (proxy.consultarInventario(p) == 0) {
                 //No hay, entonces preparas
-                if (wonka.validarPedido(p)) {
-                    pedidoTotal.add(wonka.prepararDulce(p));
-                } else {
-                    System.out.println("Tienes, pa que quieres \n");
-                }
+                wonka.validarPedido(p);    
+                pedidoTotal.add(wonka.prepararDulce(p));
+            } else {
+                System.out.println("Tienes, pa que quieres \n");
             }
         }
-
     }
+
+    
 
     /**
      * 
