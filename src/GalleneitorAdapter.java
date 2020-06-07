@@ -1,9 +1,9 @@
 public class GalleneitorAdapter implements Preparacion {
-    public Galleneitor maquina;
+    public Galleneitor galleneitor;
 
 
-    public GalleneitorAdapter(Galleneitor maquina){
-        this.maquina = maquina;
+    public GalleneitorAdapter(Galleneitor galleneitor){
+        this.galleneitor = galleneitor;
     }
 
     @Override

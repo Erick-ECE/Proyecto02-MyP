@@ -27,9 +27,9 @@ public  class Sucursal2 extends Sucursal {
      * @param jefeTecnico Referencia al jefe técnico que supervisa
      * el comportamiento de la sucursal 
      */
-    Sucursal(int id, String direccion, String reposteroEncargado, 
+    Sucursal2(String direccion, String reposteroEncargado, 
             JefeTecnico jefeTecnico) {
-        this.id = id;
+        this.id = 2;
         this. direccion = direccion;
         this.reposteroEncargado = reposteroEncargado;
         this.add(jefeTecnico);

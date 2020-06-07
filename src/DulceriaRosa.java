@@ -7,6 +7,8 @@ public class DulceriaRosa {
 
     public static void main(String[] args) {
         Sucursal sucursal;
+        Wonka wonka = new Wonka(new GalleneitorAdapter(new Galleneitor()));
+
         
         int opcion;
         
