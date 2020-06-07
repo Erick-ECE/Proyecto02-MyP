@@ -102,7 +102,7 @@ public class Wonka implements Preparacion{
     recetario.add(galletasRellenas);
     recetario.add(galletasConChispas);
 
-    lotePreparado = new Lote();
+    lotePreparado = new Lote("");
 
     this.dameEstadoActual();
   }

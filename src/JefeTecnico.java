@@ -57,7 +57,7 @@ public class JefeTecnico implements Observer {
                 wonka.validarPedido(p);
                 wonka.getEstadoActual().preparaDulce(p);
                 pedidoTotal.add(wonka.getLotePreparado());
-                wonka.setLotePreparado(new Lote());
+                wonka.setLotePreparado(new Lote(""));
             } else {
                 System.out.println("Tienes, pa que quieres \n");
             }
