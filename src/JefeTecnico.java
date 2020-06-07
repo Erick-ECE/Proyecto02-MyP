@@ -26,7 +26,10 @@ public class JefeTecnico implements Observer {
     /**
      * Constructor jefe tecnico
      */
-    public JefeTecnico() {
+    public JefeTecnico(Wonka wonka, ArrayList<SucursalProxy> sucursalProxys ) {
+        this.wonka = wonka;
+        this.sucursalProxys = sucursalProxys;
+        this.repartidores = new Repartidor[10];
     }
     
     //suponiendo que lo que se tiene que construir ya lo está
