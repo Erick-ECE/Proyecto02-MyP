@@ -11,6 +11,6 @@ public interface Subject {
     //Método para eliminar un observador
     public void remove(Object o);
     //Método que realiza la notificación al observador
-    public void notify(Object o); 
+    public void notify(ArrayList<String> o); 
 }
 

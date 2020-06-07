@@ -6,7 +6,7 @@ import java.util.ArrayList;
 * @version Junio 2020
 */
 
-public class Sucursal implements InterfazConsulta {
+public class Sucursal implements InterfazConsulta, Subject {
 
     //Id de la sucursal
     private int id;
@@ -72,6 +72,30 @@ public class Sucursal implements InterfazConsulta {
      */
    public void agregarLote(Lote lote) {
        inventario.add(lote);
+   }
+
+    /**
+    * * Método de la interfaz
+     * Método para agregar un observador
+     * No se sobreescribe porque solo tiene un observador 
+     */
+   public void add(Object o){}
+
+    /**
+    * * Método de la interfaz
+     * Método para eliminar un observador
+     * No se sobreescribe porque solo tiene un observador 
+     */
+   public void remove(Object o){}
+
+    /**
+    * * Método de la interfaz
+     * Método que realiza la notificación al observador
+     * No se sobreescribe porque solo tiene un observador 
+     */
+   @Override
+   public void notify(ArrayList<String> o){
+        this.realizarPedido(o);
    }
 
 
