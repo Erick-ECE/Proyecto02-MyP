@@ -6,6 +6,16 @@ import java.util.ArrayList;
 public class DulceriaRosa {
 
     public static void main(String[] args) {
+
+        char v = 92;
+        System.out.println("\n"+
+        "(    "+v+"/ )( "+v+"(  )   / __)(  __)/ ___)\n"+
+        " ) D () "+v+"/ (/ (_/"+v+"( (__  ) _) "+v+"___ "+v+" \n"+
+       "(____/"+v+"____/"+v+"____/ "+v+"___)(____)(____/ \n"+
+       "     ____   __   ____   __           \n"+
+        "    (  _ "+v+" /  "+v+" / ___) / _"+v+"         \n"+
+        "     )   /(  O )"+v+"___ "+v+"/    "+v+"        \n"+
+        "    (__"+v+"_) "+v+"__/ (____/"+v+"_/"+v+"_/  \n");
         
         Wonka wonka = new Wonka(new GalleneitorAdapter(new Galleneitor()));
         JefeTecnico jefetecnico = new JefeTecnico(wonka);
@@ -78,23 +88,10 @@ public class DulceriaRosa {
 
         suc2.notify(pedido3);
 
+        suc1.getInformacion();
+        suc2.getInformacion();
+        suc3.getInformacion();
 
-
-
-        
-
-        
-        char v = 92;
-        System.out.println("\n"+
-        "(    "+v+"/ )( "+v+"(  )   / __)(  __)/ ___)\n"+
-        " ) D () "+v+"/ (/ (_/"+v+"( (__  ) _) "+v+"___ "+v+" \n"+
-       "(____/"+v+"____/"+v+"____/ "+v+"___)(____)(____/ \n"+
-       "     ____   __   ____   __           \n"+
-        "    (  _ "+v+" /  "+v+" / ___) / _"+v+"         \n"+
-        "     )   /(  O )"+v+"___ "+v+"/    "+v+"        \n"+
-        "    (__"+v+"_) "+v+"__/ (____/"+v+"_/"+v+"_/  \n");
-
-       
        
     }
 }
