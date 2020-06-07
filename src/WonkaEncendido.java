@@ -34,4 +34,8 @@ public class WonkaEncendido implements Estado{
         System.out.println("Apagando máquina...\n");
         maquina.asignarEstadoActual(maquina.getEstadoApagado());
     }
+
+    public void getNombre(){
+        System.out.println("Estado actual: Encendido\n");
+    }
 }

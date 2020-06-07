@@ -42,5 +42,8 @@ public class WonkaPreparando implements Estado{
         System.out.println("Primero termino de preparar...\n");
     }
 
+    public void getNombre(){
+        System.out.println("Estado actual: Preparando\n");
+    }
     
 }

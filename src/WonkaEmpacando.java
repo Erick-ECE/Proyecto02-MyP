@@ -33,4 +33,8 @@ public class WonkaEmpacando implements Estado{
     public void apagar(){
         System.out.println("No me puedo pagar mientras empaco...\n");
     }
+
+    public void getNombre(){
+        System.out.println("Estado actual: Empacando\n");
+    }
 }

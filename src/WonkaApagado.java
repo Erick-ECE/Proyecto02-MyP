@@ -1,6 +1,5 @@
 public class WonkaApagado implements Estado{
     private Wonka maquina;
-    public String nombre = "Apagado";
 
     WonkaApagado(Wonka maquina){
         this.maquina = maquina;
@@ -24,5 +23,9 @@ public class WonkaApagado implements Estado{
     //Método no implementado en este estado
     public void apagar(){
         System.out.println("Ya estoy apagado, enciéndeme\n");
+    }
+
+    public void getNombre(){
+        System.out.println("Estado actual: Apagado\n");
     }
 }

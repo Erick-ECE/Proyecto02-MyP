@@ -107,10 +107,8 @@ public class Wonka implements Preparacion{
     this.dameEstadoActual();
   }
 
-  
-
   public void dameEstadoActual(){
-    System.out.println("mi estado actual es" + this.getEstadoActual().getNombre() + " \n");
+    this.getEstadoActual().getNombre();
   }
 
 
