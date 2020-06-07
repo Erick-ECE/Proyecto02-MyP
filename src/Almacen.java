@@ -72,7 +72,7 @@ public class Almacen {
     public int getCantidadDeIngrediente(String ingrediente) { 
         int cantidad = 0;
         for(Ingrediente i : ingredientes) {
-            if (i.getNombre().equalsIgnoreCase(ingrediente){
+            if (i.getNombre().equalsIgnoreCase(ingrediente)){
                 cantidad = i.getCantidad();
             }
         }
