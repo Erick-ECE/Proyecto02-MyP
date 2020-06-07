@@ -8,5 +8,10 @@ public class Lote {
     public String getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString() {
+        return "Lote [tipo=" + tipo + "]";
+    }
     
 }

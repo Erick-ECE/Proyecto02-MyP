@@ -68,4 +68,10 @@ public class Repartidor {
                             "RFC: "+rfc+"\n");
     }
 
+    @Override
+    public String toString() {
+        return "Repartidor [id=" + id + ", nombre=" + nombre + ", rfc=" + rfc + ", sucursales=" + sucursales + "]";
+    }
+
+    
 }

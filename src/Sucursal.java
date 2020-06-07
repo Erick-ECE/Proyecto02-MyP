@@ -66,6 +66,11 @@ public abstract class Sucursal implements InterfazConsulta, Subject {
     public void getInformacion() {
         System.out.println("ID: " + id + "\n"+"Dirección: "+ direccion +
         "\n" + "Repostero encargado: "+ reposteroEncargado+ "\n " );
+        
+        // imprime el inventario
+        for (Lote l : inventario) {
+            System.out.println(l);
+        }
     }
     
     /**
